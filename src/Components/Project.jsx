@@ -89,7 +89,7 @@ const Project = () => {
         <h2 className={`${styles.sectionHeadText} text-center`}>Project</h2>
       </motion.div>
 
-      <div className="mt-20 flex flex-col">
+      <div className="mt-20 flex flex-col" id="projects">
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard

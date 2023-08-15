@@ -10,10 +10,7 @@ const Skill = () => {
       <h2 className={styles.sectionHeadText}>Skill.</h2>
       <p className={styles.sectionSubText}>FrontEnd</p>
 
-      <div
-        id="skills"
-        className="flex flex-row flex-wrap justify-center gap-8 py-5"
-      >
+      <div className="flex flex-row flex-wrap justify-center gap-8 py-5">
         {frontEnd.map((technology) => (
           <div
             className="w-28 h-28 skills-card-img skills-card"
