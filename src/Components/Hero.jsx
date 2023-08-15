@@ -2,6 +2,7 @@ import React from "react";
 import { styles } from "../style";
 import { download, Resume, Vector } from "../assets";
 import { Tilt } from "react-tilt";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -30,17 +31,22 @@ const Hero = () => {
             </p>
             <Tilt className="xs:w-[250px] w-full">
               <button
-                id="resume-button-1"
+                id="resume-button-2"
                 className="bg-secondary px-3 py-2 my-2  rounded-md shadow-lg shadow-purple-500/50 font-bold text-primary underline hover:underline"
               >
-                <a
-                  href={Resume}
+                <Link
+                  id="resume-link-2"
+                  to={Resume}
                   download="Hardik-Gajera-Resume.pdf"
                   className="flex items-center"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    window.open(Resume, "_blank");
+                  }}
                 >
                   <img src={download} alt="resume" className="w-4 mr-2" />{" "}
                   Resume
-                </a>
+                </Link>
               </button>
             </Tilt>
           </div>

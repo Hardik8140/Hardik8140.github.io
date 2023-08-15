@@ -12,10 +12,7 @@ const Skill = () => {
 
       <div className="flex flex-row flex-wrap justify-center gap-8 py-5">
         {frontEnd.map((technology) => (
-          <div
-            className="w-28 h-28 skills-card-img skills-card"
-            key={technology.name}
-          >
+          <div className="w-28 h-28  skills-card" key={technology.name}>
             <BallCanvas icon={technology.icon} />
           </div>
         ))}
@@ -23,7 +20,7 @@ const Skill = () => {
 
       <p className={styles.sectionSubText}>BackEnd : </p>
 
-      <div className="flex flex-row flex-wrap justify-center gap-8 py-5 skills-card-img">
+      <div className="flex flex-row flex-wrap justify-center gap-8 py-5 ">
         {backendskill.map((technology) => (
           <div className="w-28 h-28 skills-card" key={technology.name}>
             <BallCanvas icon={technology.icon} />

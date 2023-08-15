@@ -107,20 +107,25 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
-          <li
-            className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary"
-            id="resume-button-2"
-          >
-            <a
-              href={Resume}
-              download="Hardik-Gajera-Resume.pdf"
-              className={`${
-                active ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link contact nav-link resume`}
-              onClick={() => setActive()}
-            >
-              Resume
-            </a>
+          <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
+            <button id="resume-button-1">
+              <Link
+                id="resume-link-1"
+                to={Resume}
+                target="_blank"
+                className={`${
+                  active ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer nav-link contact nav-link resume`}
+                onClick={(event) => {
+                  event.preventDefault();
+                  setActive();
+                  window.open(Resume, "_blank");
+                }}
+                download="Hardik-Gajera-Resume.pdf"
+              >
+                Resume
+              </Link>
+            </button>
           </li>
         </ul>
 
@@ -208,20 +213,25 @@ const Navbar = () => {
                   Contact
                 </Link>
               </li>
-              <li
-                className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary"
-                id="resume-button-2"
-              >
-                <a
-                  href={Resume}
-                  download="Hardik-Gajera-Resume.pdf"
-                  className={`${
-                    active ? "text-white" : "text-secondary"
-                  }  hover:text-white text-[18px] font-medium cursor-pointer nav-link contact`}
-                  onClick={() => setActive()}
-                >
-                  Resume
-                </a>
+              <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
+                <button id="resume-button-1">
+                  <Link
+                    id="resume-link-1"
+                    to={Resume}
+                    target="_blank"
+                    className={`${
+                      active ? "text-white" : "text-secondary"
+                    } hover:text-white text-[18px] font-medium cursor-pointer nav-link contact nav-link resume`}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      setActive();
+                      window.open(Resume, "_blank");
+                    }}
+                    download="Hardik-Gajera-Resume.pdf"
+                  >
+                    Resume
+                  </Link>
+                </button>
               </li>
             </ul>
           </div>
