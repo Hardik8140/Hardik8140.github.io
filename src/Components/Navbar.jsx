@@ -51,12 +51,12 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li>
+          <li className="nav-link.about">
             <Link
               // to="/about"
               className={`${
                 active === "About" ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link.about`}
+              } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
                 setActive("About");
                 scrollToTop();
