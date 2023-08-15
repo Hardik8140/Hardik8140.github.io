@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { styles } from "../style";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { logoNoBackground, menu, close, Resume } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
+  // const scrollToTop = () => {
+  //   window.scrollTo(0, 0);
+  // };
 
   return (
     <nav
@@ -19,10 +19,10 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
-          className="flex items-center gap-2 nav-link.home"
+          className="flex items-center gap-2 nav-link home"
           onClick={() => {
             setActive("");
-            scrollToTop();
+            window.scrollTo(0, 0);
           }}
         >
           <img
@@ -40,12 +40,16 @@ const Navbar = () => {
           <li>
             <Link
               to="/"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
               className={`${
                 active === "Home" ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link.home`}
+              } hover:text-white text-[18px] font-medium cursor-pointer nav-link home`}
               onClick={() => {
                 setActive("Home");
-                scrollToTop();
+                window.scrollTo(0, 0);
               }}
             >
               Home
@@ -53,13 +57,16 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/about"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={50}
               className={`${
                 active === "About" ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link.about`}
+              } hover:text-white text-[18px] font-medium cursor-pointer nav-link about`}
               onClick={() => {
                 setActive("About");
-                scrollToTop();
               }}
             >
               About
@@ -67,8 +74,12 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/skills"
-              className={`nav-link.skills ${
+              to="skills"
+              spy={true}
+              smooth={true}
+              offset={-60}
+              duration={50}
+              className={`nav-link skills ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
@@ -79,10 +90,14 @@ const Navbar = () => {
               Skill
             </Link>
           </li>
-          <li>
+          <li className="">
             <Link
-              to="/projects"
-              className={`nav-link.projects ${
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-80}
+              duration={50}
+              className={`nav-link projects ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
@@ -93,10 +108,14 @@ const Navbar = () => {
               Project
             </Link>
           </li>
-          <li>
+          <li className="">
             <Link
               to="/contact"
-              className={`nav-link.contact ${
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              className={`nav-link contact ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
@@ -110,7 +129,6 @@ const Navbar = () => {
           <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
             <button id="resume-button-1">
               <Link
-                id="resume-link-1"
                 to={Resume}
                 target="_blank"
                 className={`${
@@ -159,7 +177,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="/about"
+                  to="about"
                   className={`${
                     active ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer`}
