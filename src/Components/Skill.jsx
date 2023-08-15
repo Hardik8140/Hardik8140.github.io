@@ -14,16 +14,20 @@ const Skill = () => {
         {frontEnd.map((technology) => (
           <div className="w-28 h-28  skills-card" key={technology.name}>
             <BallCanvas icon={technology.icon} />
+            <p className={`${styles.sectionSubText} skills-card-name`}>
+              {technology.name}
+            </p>
           </div>
         ))}
       </div>
 
-      <p className={styles.sectionSubText}>BackEnd : </p>
+      <p className={`${styles.sectionSubText} py-7 `}>BackEnd : </p>
 
       <div className="flex flex-row flex-wrap justify-center gap-8 py-5 ">
         {backendskill.map((technology) => (
           <div className="w-28 h-28 skills-card" key={technology.name}>
             <BallCanvas icon={technology.icon} />
+            <p className={styles.sectionSubText}>{technology.name}</p>
           </div>
         ))}
       </div>

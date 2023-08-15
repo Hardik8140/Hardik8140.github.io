@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
-          className="flex items-center gap-2 nav-link home"
+          className="flex items-center gap-2 nav-link.home"
           onClick={() => {
             setActive("");
             scrollToTop();
@@ -42,7 +42,7 @@ const Navbar = () => {
               to="/"
               className={`${
                 active === "Home" ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link home`}
+              } hover:text-white text-[18px] font-medium cursor-pointer nav-link.home`}
               onClick={() => {
                 setActive("Home");
                 scrollToTop();
@@ -56,7 +56,7 @@ const Navbar = () => {
               to="/about"
               className={`${
                 active === "About" ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link about`}
+              } hover:text-white text-[18px] font-medium cursor-pointer nav-link.about`}
               onClick={() => {
                 setActive("About");
                 scrollToTop();
@@ -68,7 +68,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/skills"
-              className={`nav-link skills ${
+              className={`nav-link.skills ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
@@ -79,10 +79,10 @@ const Navbar = () => {
               Skill
             </Link>
           </li>
-          <li className="">
+          <li>
             <Link
               to="/projects"
-              className={`nav-link projects ${
+              className={`nav-link.projects ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
@@ -93,10 +93,10 @@ const Navbar = () => {
               Project
             </Link>
           </li>
-          <li className="">
+          <li>
             <Link
               to="/contact"
-              className={`nav-link contact ${
+              className={`nav-link.contact ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
