@@ -36,7 +36,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className="list-none hidden lg:flex flex-row gap-10">
+        <ul className="list hidden lg:flex flex-row gap-10">
           <li>
             <Link
               to="/"
@@ -53,6 +53,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
+              to="/about"
               className={`${
                 active === "About" ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer nav-link about`}
@@ -64,8 +65,9 @@ const Navbar = () => {
               About
             </Link>
           </li>
-          <li className="">
+          <li>
             <Link
+              to="/skills"
               className={`nav-link skills ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
@@ -79,7 +81,7 @@ const Navbar = () => {
           </li>
           <li className="">
             <Link
-              to="/project"
+              to="/projects"
               className={`nav-link projects ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
