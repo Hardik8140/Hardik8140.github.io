@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
-          className="flex items-center gap-2 nav-link home"
+          className="flex items-center gap-2 nav-link.home"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
@@ -46,7 +46,7 @@ const Navbar = () => {
               duration={500}
               className={`${
                 active === "Home" ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link home`}
+              } hover:text-white text-[18px] font-medium cursor-pointer nav-link.home`}
               onClick={() => {
                 setActive("Home");
                 window.scrollTo(0, 0);
@@ -64,7 +64,7 @@ const Navbar = () => {
               duration={50}
               className={`${
                 active === "About" ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link about`}
+              } hover:text-white text-[18px] font-medium cursor-pointer nav-link.about`}
               onClick={() => {
                 setActive("About");
               }}
@@ -79,7 +79,7 @@ const Navbar = () => {
               smooth={true}
               offset={-60}
               duration={50}
-              className={`nav-link skills ${
+              className={`nav-link.skills ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
@@ -97,7 +97,7 @@ const Navbar = () => {
               smooth={true}
               offset={-80}
               duration={50}
-              className={`nav-link projects ${
+              className={`nav-link.projects ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
@@ -110,12 +110,30 @@ const Navbar = () => {
           </li>
           <li className="">
             <Link
-              to="/contact"
+              to="statistics"
+              spy={true}
+              smooth={true}
+              offset={-80}
+              duration={50}
+              className={`${
+                active ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer `}
+              onClick={() => {
+                setActive("");
+                window.scrollTo(0, 0);
+              }}
+            >
+              Statistics
+            </Link>
+          </li>
+          <li className="">
+            <Link
+              to="contact"
               spy={true}
               smooth={true}
               offset={50}
               duration={500}
-              className={`nav-link contact ${
+              className={`nav-link.contact ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
@@ -164,9 +182,13 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
                   className={`${
                     active ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link home`}
+                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link.home`}
                   onClick={() => {
                     setActive("");
                     window.scrollTo(0, 0);
@@ -178,12 +200,15 @@ const Navbar = () => {
               <li>
                 <Link
                   to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={50}
                   className={`${
                     active ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer`}
+                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link.about`}
                   onClick={() => {
-                    setActive("");
-                    window.scrollTo(0, 0);
+                    setActive("About");
                   }}
                 >
                   About
@@ -192,9 +217,13 @@ const Navbar = () => {
               <li>
                 <Link
                   to="skill"
+                  spy={true}
+                  smooth={true}
+                  offset={-60}
+                  duration={50}
                   className={`${
                     active ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer`}
+                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link.skill`}
                   onClick={() => {
                     setActive("");
                     window.scrollTo(0, 0);
@@ -205,10 +234,14 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="/project"
+                  to="project"
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={50}
                   className={`${
                     active ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer`}
+                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link.projects`}
                   onClick={() => {
                     setActive("");
                     window.scrollTo(0, 0);
@@ -219,10 +252,14 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="/contact"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
                   className={`${
                     active ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer`}
+                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link.contact`}
                   onClick={() => {
                     setActive("");
                     window.scrollTo(0, 0);

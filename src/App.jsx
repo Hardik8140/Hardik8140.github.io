@@ -5,6 +5,7 @@ import About from "./Components/About";
 import Skill from "./Components/Skill";
 import Project from "./Components/Project";
 import Contact from "./Components/Contact";
+import Statistics from "./Components/Statistics";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <About />
         <Skill />
         <Project />
+        <Statistics />
         <Contact />
       </div>
     </BrowserRouter>

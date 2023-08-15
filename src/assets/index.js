@@ -47,8 +47,16 @@ import qeepProject from "./qeep.png";
 import growFin from "./growFin.png";
 
 import hardik from "./hardik.png";
+import code from "./twotone-code.svg";
+import commit from "./commit.svg";
+import done from "./cloud-done-outline.svg";
+import hours from "./shop-hours-outline.svg";
 
 export {
+  hours,
+  done,
+  commit,
+  code,
   growFin,
   qeepProject,
   grow,
