@@ -65,12 +65,12 @@ const Navbar = () => {
               About
             </Link>
           </li>
-          <li>
+          <li className="nav-link skills">
             <Link
               to="/skill"
               className={`${
                 active ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link skills`}
+              } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
                 setActive("");
                 window.scrollTo(0, 0);
@@ -79,12 +79,12 @@ const Navbar = () => {
               Skill
             </Link>
           </li>
-          <li>
+          <li className="nav-link projects">
             <Link
               to="/project"
               className={`${
                 active ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link projects`}
+              } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
                 setActive("");
                 window.scrollTo(0, 0);
@@ -93,12 +93,12 @@ const Navbar = () => {
               Project
             </Link>
           </li>
-          <li>
+          <li className="nav-link contact">
             <Link
               to="/contact"
               className={`${
                 active ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link contact`}
+              } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
                 setActive("");
                 window.scrollTo(0, 0);
