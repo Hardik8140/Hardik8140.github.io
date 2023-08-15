@@ -42,7 +42,7 @@ const Navbar = () => {
               to="/"
               className={`${
                 active === "Home" ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link.home`}
+              } hover:text-white text-[18px] font-medium cursor-pointer .nav-link.home`}
               onClick={() => {
                 setActive("Home");
                 scrollToTop();
@@ -51,12 +51,11 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li className="nav-link.about">
+          <li>
             <Link
-              // to="/about"
               className={`${
                 active === "About" ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer `}
+              } hover:text-white text-[18px] font-medium cursor-pointer nav-link.about`}
               onClick={() => {
                 setActive("About");
                 scrollToTop();
@@ -65,10 +64,10 @@ const Navbar = () => {
               About
             </Link>
           </li>
-          <li className="nav-link skills">
+          <li className="">
             <Link
               to="/skill"
-              className={`${
+              className={`nav-link.skills ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
@@ -79,10 +78,10 @@ const Navbar = () => {
               Skill
             </Link>
           </li>
-          <li className="nav-link projects">
+          <li className="">
             <Link
               to="/project"
-              className={`${
+              className={`nav-link.projects ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
@@ -93,10 +92,10 @@ const Navbar = () => {
               Project
             </Link>
           </li>
-          <li className="nav-link contact">
+          <li className="">
             <Link
               to="/contact"
-              className={`${
+              className={`nav-link.contact ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {

@@ -6,7 +6,7 @@ import { styles } from "../style";
 
 const Skill = () => {
   return (
-    <>
+    <div id="skills">
       <h2 className={styles.sectionHeadText}>Skill.</h2>
       <p className={styles.sectionSubText}>FrontEnd</p>
 
@@ -33,7 +33,7 @@ const Skill = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

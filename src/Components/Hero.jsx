@@ -19,7 +19,8 @@ const Hero = () => {
           {/* Name Section */}
           <div className="w-full">
             <h1
-              className={`${styles.heroHeadText} text-white user-detail-name`}
+              id="user-detail-name"
+              className={`${styles.heroHeadText} text-white `}
             >
               Hi, I'm <span className=" text-[#915eff]">Hardik</span>
             </h1>
@@ -50,7 +51,7 @@ const Hero = () => {
           <img
             src={Vector}
             alt=""
-            className="md:absolute lg:w-80 md:w-64 sm:w-32 flex md:right-8 bg-blend-multiply"
+            className="home-img md:absolute lg:w-80 md:w-64 sm:w-32 flex md:right-8 bg-blend-multiply"
           />
           {/* </div> */}
           {/* </div> */}
