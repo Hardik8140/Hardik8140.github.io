@@ -55,7 +55,7 @@ const Navbar = () => {
             <Link
               className={`${
                 active === "About" ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link.about`}
+              } hover:text-white text-[18px] font-medium cursor-pointer .nav-link.about`}
               onClick={() => {
                 setActive("About");
                 scrollToTop();
