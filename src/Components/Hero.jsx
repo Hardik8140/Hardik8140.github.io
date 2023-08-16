@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto" id="home">
       <div
-        className={`${styles.paddingX} absolute inset-0 lg:top-[120px] md:top-28 sm:top-24 xs:top-16 xxs:top-20 max-w-7xl mx-auto flex flex-row lg:flex-row items-start gap-5`}
+        className={`${styles.paddingX} absolute inset-0 lg:top-[120px] md:top-28 sm:top-24 xs:top-28 xxs:top-20 max-w-7xl mx-auto flex flex-row lg:flex-row items-start gap-5`}
       >
         {/* Gradient */}
         <div className="flex flex-col justify-center items-center mt-5">
@@ -16,7 +16,7 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
-        <div className="grid lg:grid-cols-2 sm:grid-cols-1">
+        <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-40">
           {/* Name Section */}
           <div className="w-full">
             <h1
@@ -57,7 +57,7 @@ const Hero = () => {
           <img
             src={Vector}
             alt=""
-            className="home-img md:absolute lg:w-80 md:w-64 sm:w-32 flex md:right-8 bg-blend-multiply"
+            className="home-img md:absolute lg:w-80 md:w-64 sm:w-32 flex md:right-10 bg-blend-multiply"
           />
           {/* </div> */}
           {/* </div> */}

@@ -19,7 +19,7 @@ const Statistics = () => {
   return (
     <>
       <div
-        id="about"
+        id="statistics"
         variants={textVariant()}
         className={`${styles.paddingX} max-w-7xl mx-auto `}
       >
@@ -165,19 +165,25 @@ const Statistics = () => {
         </div>
 
         {/* multi langauge */}
-        <div id="github-stats-card" className="mt-10 gap-5">
-          <h2 className={`${styles.sectionSubText} mt-9 mb-9`}>GitHub stats</h2>
-          <a href="https://github-readme-stats.vercel.app/api?username=hardik8140&show_icons=true&theme=cobalt&border_radius=12.5">
-            <img src="https://github-readme-stats.vercel.app/api?username=hardik8140&show_icons=true&theme=transparent&border_radius=12.5&border_color=green" />
-          </a>
-        </div>
+        <div>
+          <div id="github-stats-card" className="mt-10 gap-5">
+            <h2 className={`${styles.sectionSubText} mt-9 mb-9`}>
+              GitHub stats
+            </h2>
+            <a href="https://github-readme-stats.vercel.app/api?username=hardik8140&show_icons=true&theme=cobalt&border_radius=12.5">
+              <img src="https://github-readme-stats.vercel.app/api?username=hardik8140&show_icons=true&theme=transparent&border_radius=12.5&border_color=green" />
+            </a>
+          </div>
 
-        {/* multi langauge */}
-        <div id="github-top-langs" className="mt-10 gap-5">
-          <h2 className={`${styles.sectionSubText} mt-9 mb-9`}>GitHub stats</h2>
-          <a href="https://github-readme-stats.vercel.app/api?username=hardik8140&show_icons=true&theme=cobalt&border_radius=12.5">
-            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact&theme=transparent&border_radius=12.5" />
-          </a>
+          {/* multi langauge */}
+          <div id="github-top-langs" className="mt-10 gap-5">
+            <h2 className={`${styles.sectionSubText} mt-9 mb-9`}>
+              GitHub stats
+            </h2>
+            <a href="https://github-readme-stats.vercel.app/api?username=hardik8140&show_icons=true&theme=cobalt&border_radius=12.5">
+              <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact&theme=transparent&border_radius=12.5" />
+            </a>
+          </div>
         </div>
       </div>
     </>

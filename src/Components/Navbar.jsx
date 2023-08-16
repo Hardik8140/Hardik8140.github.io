@@ -205,7 +205,7 @@ const Navbar = () => {
                   offset={-50}
                   duration={50}
                   className={`${
-                    active ? "text-white" : "text-secondary"
+                    active === "About" ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer nav-link.about`}
                   onClick={() => {
                     setActive("About");
@@ -216,13 +216,13 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="skill"
+                  to="skills"
                   spy={true}
                   smooth={true}
                   offset={-60}
                   duration={50}
                   className={`${
-                    active ? "text-white" : "text-secondary"
+                    active === "skills" ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer nav-link.skill`}
                   onClick={() => {
                     setActive("");
@@ -234,13 +234,13 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="project"
+                  to="projects"
                   spy={true}
                   smooth={true}
                   offset={-80}
                   duration={50}
                   className={`${
-                    active ? "text-white" : "text-secondary"
+                    active === "project" ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer nav-link.projects`}
                   onClick={() => {
                     setActive("");
@@ -248,6 +248,24 @@ const Navbar = () => {
                   }}
                 >
                   Project
+                </Link>
+              </li>
+              <li className="">
+                <Link
+                  to="statistics"
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={50}
+                  className={`${
+                    active === "statistics" ? "text-white" : "text-secondary"
+                  } hover:text-white text-[18px] font-medium cursor-pointer `}
+                  onClick={() => {
+                    setActive("");
+                    window.scrollTo(0, 0);
+                  }}
+                >
+                  Statistics
                 </Link>
               </li>
               <li>
