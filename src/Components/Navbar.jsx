@@ -36,7 +36,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className="list hidden lg:flex flex-row gap-10">
+        <ul className="list  lg:flex flex-row gap-10">
           <li>
             <Link
               to="/"
@@ -178,7 +178,7 @@ const Navbar = () => {
               !toggle ? "hidden" : "flex"
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
-            <ul className="list-none flex justify-center items-start flex-col gap-4">
+            <ul className="list flex justify-center items-start flex-col gap-4">
               <li>
                 <Link
                   to="/"

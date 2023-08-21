@@ -16,7 +16,7 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
-        <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-40">
+        <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-40">
           {/* Name Section */}
           <div className="w-full">
             <h1
