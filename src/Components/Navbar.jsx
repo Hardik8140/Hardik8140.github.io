@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
-          className="flex items-center gap-2 nav-link.home"
+          className="flex items-center gap-2 nav-link home"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
@@ -36,7 +36,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className="list  lg:flex flex-row gap-10">
+        <ul className="list lg:flex flex-row gap-10">
           <li>
             <Link
               to="/"
@@ -46,7 +46,7 @@ const Navbar = () => {
               duration={500}
               className={`${
                 active === "Home" ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link.home`}
+              } hover:text-white text-[18px] font-medium cursor-pointer nav-link home`}
               onClick={() => {
                 setActive("Home");
                 window.scrollTo(0, 0);
@@ -64,7 +64,7 @@ const Navbar = () => {
               duration={50}
               className={`${
                 active === "About" ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link.about`}
+              } hover:text-white text-[18px] font-medium cursor-pointer nav-link about`}
               onClick={() => {
                 setActive("About");
               }}
@@ -79,7 +79,7 @@ const Navbar = () => {
               smooth={true}
               offset={-60}
               duration={50}
-              className={`nav-link.skills ${
+              className={`nav-link skills ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
@@ -87,7 +87,7 @@ const Navbar = () => {
                 window.scrollTo(0, 0);
               }}
             >
-              Skill
+              Skills
             </Link>
           </li>
           <li className="">
@@ -97,7 +97,7 @@ const Navbar = () => {
               smooth={true}
               offset={-80}
               duration={50}
-              className={`nav-link.projects ${
+              className={`nav-link projects ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
@@ -133,7 +133,7 @@ const Navbar = () => {
               smooth={true}
               offset={50}
               duration={500}
-              className={`nav-link.contact ${
+              className={`nav-link contact ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
@@ -188,7 +188,7 @@ const Navbar = () => {
                   duration={500}
                   className={`${
                     active ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link.home`}
+                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link home`}
                   onClick={() => {
                     setActive("");
                     window.scrollTo(0, 0);
@@ -206,7 +206,7 @@ const Navbar = () => {
                   duration={50}
                   className={`${
                     active === "About" ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link.about`}
+                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link about`}
                   onClick={() => {
                     setActive("About");
                   }}
@@ -223,7 +223,7 @@ const Navbar = () => {
                   duration={50}
                   className={`${
                     active === "skills" ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link.skill`}
+                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link skills`}
                   onClick={() => {
                     setActive("");
                     window.scrollTo(0, 0);
@@ -241,7 +241,7 @@ const Navbar = () => {
                   duration={50}
                   className={`${
                     active === "project" ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link.projects`}
+                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link projects`}
                   onClick={() => {
                     setActive("");
                     window.scrollTo(0, 0);
@@ -277,7 +277,7 @@ const Navbar = () => {
                   duration={500}
                   className={`${
                     active ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link.contact`}
+                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link contact`}
                   onClick={() => {
                     setActive("");
                     window.scrollTo(0, 0);
