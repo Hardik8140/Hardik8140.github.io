@@ -10,13 +10,11 @@ const Skill = () => {
       <h2 className={styles.sectionHeadText}>Skill.</h2>
       <p className={styles.sectionSubText}>FrontEnd</p>
 
-      <div className="flex flex-row flex-wrap justify-center gap-8 py-5">
+      <div className="flex flex-row flex-wrap justify-center gap-8 py-5 skills-card-name">
         {frontEnd.map((technology) => (
           <div className="w-28 h-28  skills-card" key={technology.name}>
             <BallCanvas icon={technology.icon} />
-            <p className={`${styles.sectionSubText} skills-card-name`}>
-              {technology.name}
-            </p>
+            <p className={`${styles.sectionSubText}`}>{technology.name}</p>
           </div>
         ))}
       </div>

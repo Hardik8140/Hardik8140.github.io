@@ -155,33 +155,42 @@ const Statistics = () => {
         {/* </Tilt> */}
 
         {/* github stats card */}
-        <div id="github-streak-stats" className="mt-10 gap-5">
+        <div className="mt-10 gap-5">
           <h2 className={`${styles.sectionSubText} mt-9 mb-9`}>
             GitHub streak stats
           </h2>
           <a href="https://git.io/streak-stats">
-            <img src="https://streak-stats.demolab.com?user=hardik8140&theme=cobalt&border_radius=12.5" />
+            <img
+              id="github-streak-stats"
+              src="https://streak-stats.demolab.com?user=hardik8140&theme=cobalt&border_radius=12.5"
+            />
           </a>
         </div>
 
         {/* multi langauge */}
         <div>
-          <div id="github-stats-card" className="mt-10 gap-5">
+          <div className="mt-10 gap-5">
             <h2 className={`${styles.sectionSubText} mt-9 mb-9`}>
               GitHub stats
             </h2>
             <a href="https://github-readme-stats.vercel.app/api?username=hardik8140&show_icons=true&theme=cobalt&border_radius=12.5">
-              <img src="https://github-readme-stats.vercel.app/api?username=hardik8140&show_icons=true&theme=transparent&border_radius=12.5&border_color=green" />
+              <img
+                id="github-stats-card"
+                src="https://github-readme-stats.vercel.app/api?username=hardik8140&show_icons=true&theme=transparent&border_radius=12.5&border_color=green"
+              />
             </a>
           </div>
 
           {/* multi langauge */}
-          <div id="github-top-langs" className="mt-10 gap-5">
+          <div className="mt-10 gap-5">
             <h2 className={`${styles.sectionSubText} mt-9 mb-9`}>
               GitHub stats
             </h2>
             <a href="https://github-readme-stats.vercel.app/api?username=hardik8140&show_icons=true&theme=cobalt&border_radius=12.5">
-              <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact&theme=transparent&border_radius=12.5" />
+              <img
+                id="github-top-langs"
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact&theme=transparent&border_radius=12.5"
+              />
             </a>
           </div>
         </div>
