@@ -55,7 +55,7 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li>
+          <li className="nav-link about">
             <Link
               to="about"
               spy={true}
@@ -72,7 +72,7 @@ const Navbar = () => {
               About
             </Link>
           </li>
-          <li>
+          <li className="nav-link skills">
             <Link
               to="skills"
               spy={true}
@@ -80,7 +80,7 @@ const Navbar = () => {
               offset={-60}
               duration={50}
               className={`nav-link skills ${
-                active ? "text-white" : "text-secondary"
+                active === "skills" ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
                 setActive("");
@@ -90,7 +90,7 @@ const Navbar = () => {
               Skills
             </Link>
           </li>
-          <li className="">
+          <li className="nav-link projects">
             <Link
               to="projects"
               spy={true}
@@ -98,7 +98,7 @@ const Navbar = () => {
               offset={-80}
               duration={50}
               className={`nav-link projects ${
-                active ? "text-white" : "text-secondary"
+                active === "projects" ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
                 setActive("");
@@ -134,7 +134,7 @@ const Navbar = () => {
               offset={50}
               duration={500}
               className={`nav-link contact ${
-                active ? "text-white" : "text-secondary"
+                active === "contact" ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
                 setActive("");
