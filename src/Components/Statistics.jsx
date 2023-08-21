@@ -189,7 +189,7 @@ const Statistics = () => {
             <a href="https://github-readme-stats.vercel.app/api?username=hardik8140&show_icons=true&theme=cobalt&border_radius=12.5">
               <img
                 id="github-top-langs"
-                src="https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact&theme=transparent&border_radius=12.5"
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=hardik8140&layout=compact&theme=transparent&border_radius=12.5"
               />
             </a>
           </div>
