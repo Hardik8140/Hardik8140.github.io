@@ -31,6 +31,7 @@ import {
   grow,
   qeepProject,
   growFin,
+  furlinko,
 } from "../assets";
 
 export const navLinks = [
@@ -126,6 +127,21 @@ const backendskill = [
 ];
 
 const experiences = [
+  {
+    title: "Furlinko, The online Furniture Store",
+    techStack: "HTML | CSS | JavaScript | React.Js | Redux | ChakraUi",
+    icon: qeep,
+    iconBg: "#383E56",
+    date: "March 2020 - April 2021",
+    image: furlinko,
+    github: "https://github.com/Hardik8140/gas-scarecrow-3264",
+    live: "https://gas-scarecrow-3264.vercel.app/",
+    points: [
+      "Implemented a user registration and the CRUD operation also a authentication features, product card and the purchase.",
+      "Admin panel, Adding and deleting the product and filtering and sorting the product and Wishlist.",
+      "Develope this project in the within a 5 days timeframe.",
+    ],
+  },
   {
     title: "Qeep, The online shoe Store",
     techStack: "React.js | Chakra Ui | Javascript | HTML | CSS",

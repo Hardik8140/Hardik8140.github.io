@@ -20,10 +20,10 @@ const Navbar = () => {
         <Link
           to="/"
           className="flex items-center gap-2 nav-link home"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
+          // onClick={() => {
+          //   setActive("");
+          //   window.scrollTo(0, 0);
+          // }}
         >
           <img
             src={logoNoBackground}
@@ -55,7 +55,7 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li className="nav-link about">
+          <li>
             <Link
               to="about"
               spy={true}
@@ -63,7 +63,7 @@ const Navbar = () => {
               offset={-50}
               duration={50}
               className={`${
-                active === "About" ? "text-white" : "text-secondary"
+                active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer nav-link about`}
               onClick={() => {
                 setActive("About");
@@ -72,7 +72,7 @@ const Navbar = () => {
               About
             </Link>
           </li>
-          <li className="nav-link skills">
+          <li>
             <Link
               to="skills"
               spy={true}
@@ -90,7 +90,7 @@ const Navbar = () => {
               Skills
             </Link>
           </li>
-          <li className="nav-link projects">
+          <li>
             <Link
               to="projects"
               spy={true}
@@ -108,7 +108,7 @@ const Navbar = () => {
               Project
             </Link>
           </li>
-          <li className="">
+          <li>
             <Link
               to="statistics"
               spy={true}
@@ -126,7 +126,7 @@ const Navbar = () => {
               Statistics
             </Link>
           </li>
-          <li className="">
+          <li>
             <Link
               to="contact"
               spy={true}
