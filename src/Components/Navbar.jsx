@@ -20,10 +20,10 @@ const Navbar = () => {
         <Link
           to="/"
           className="flex items-center gap-2 nav-link home"
-          // onClick={() => {
-          //   setActive("");
-          //   window.scrollTo(0, 0);
-          // }}
+          onClick={() => {
+            setActive("");
+            window.scrollTo(0, 0);
+          }}
         >
           <img
             src={logoNoBackground}
@@ -131,8 +131,8 @@ const Navbar = () => {
               to="contact"
               spy={true}
               smooth={true}
-              offset={50}
-              duration={500}
+              offset={-80}
+              duration={50}
               className={`nav-link contact ${
                 active === "contact" ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer `}
@@ -273,10 +273,10 @@ const Navbar = () => {
                   to="contact"
                   spy={true}
                   smooth={true}
-                  offset={50}
-                  duration={500}
+                  offset={-70}
+                  duration={50}
                   className={`${
-                    active ? "text-white" : "text-secondary"
+                    active === "contact" ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer nav-link contact`}
                   onClick={() => {
                     setActive("");
