@@ -36,7 +36,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className="list:none hidden lg:flex flex-row gap-10">
+        <ul className="hidden lg:flex flex-row gap-10">
           <li className="nav-link home">
             <Link
               to="/"
