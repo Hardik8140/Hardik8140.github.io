@@ -37,7 +37,7 @@ const Navbar = () => {
         </Link>
 
         <ul className="list:none hidden lg:flex flex-row gap-10">
-          <li>
+          <li className="nav-link home">
             <Link
               to="/"
               spy={true}
@@ -46,7 +46,7 @@ const Navbar = () => {
               duration={500}
               className={`${
                 active === "Home" ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link home`}
+              } hover:text-white text-[18px] font-medium cursor-pointer `}
               onClick={() => {
                 setActive("Home");
                 window.scrollTo(0, 0);
@@ -55,7 +55,7 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li>
+          <li className="nav-link about">
             <Link
               to="about"
               spy={true}
@@ -72,7 +72,7 @@ const Navbar = () => {
               About
             </Link>
           </li>
-          <li>
+          <li className="nav-link skills">
             <Link
               to="skills"
               spy={true}
@@ -90,7 +90,7 @@ const Navbar = () => {
               Skills
             </Link>
           </li>
-          <li>
+          <li className="nav-link projects">
             <Link
               to="projects"
               spy={true}
@@ -126,7 +126,7 @@ const Navbar = () => {
               Statistics
             </Link>
           </li>
-          <li>
+          <li className="nav-link contact">
             <Link
               to="contact"
               spy={true}
