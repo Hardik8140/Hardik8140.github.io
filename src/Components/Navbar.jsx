@@ -36,7 +36,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className=" lg:flex flex-row gap-10">
+        <ul className="list:none hidden lg:flex flex-row gap-10">
           <li className="nav-link home">
             <Link
               to="/"
@@ -175,10 +175,10 @@ const Navbar = () => {
 
           <div
             className={`${
-              !toggle ? "none" : "flex"
+              !toggle ? "hidden" : "flex"
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
-            <ul className="list flex justify-center items-start flex-col gap-4">
+            <ul className="list-none flex justify-center items-start flex-col gap-4">
               <li>
                 <Link
                   to="/"
@@ -206,7 +206,7 @@ const Navbar = () => {
                   duration={50}
                   className={`${
                     active === "About" ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer `}
+                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link about`}
                   onClick={() => {
                     setActive("About");
                   }}
