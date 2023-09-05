@@ -79,7 +79,7 @@ const Navbar = () => {
               smooth={true}
               offset={-60}
               duration={50}
-              className={`nav-link skills ${
+              className={` ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer nav-link skills`}
               onClick={() => {
@@ -97,7 +97,7 @@ const Navbar = () => {
               smooth={true}
               offset={-80}
               duration={50}
-              className={`nav-link projects ${
+              className={` ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer nav-link projects`}
               onClick={() => {
@@ -133,7 +133,7 @@ const Navbar = () => {
               smooth={true}
               offset={-80}
               duration={50}
-              className={`nav-link contact ${
+              className={` ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer nav-link contact`}
               onClick={() => {
@@ -205,7 +205,7 @@ const Navbar = () => {
                   offset={-50}
                   duration={50}
                   className={`${
-                    active === "About" ? "text-white" : "text-secondary"
+                    active ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer nav-link about`}
                   onClick={() => {
                     setActive("About");
