@@ -277,7 +277,7 @@ const Navbar = () => {
                   duration={50}
                   className={`${
                     active ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link contact`}
+                  } hover:text-white text-[18px] font-medium cursor-pointer `}
                   onClick={() => {
                     setActive("");
                     window.scrollTo(0, 0);
