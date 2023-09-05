@@ -206,7 +206,7 @@ const Navbar = () => {
                   duration={50}
                   className={`${
                     active === "About" ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link about`}
+                  } hover:text-white text-[18px] font-medium cursor-pointer `}
                   onClick={() => {
                     setActive("About");
                   }}
