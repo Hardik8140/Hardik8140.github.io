@@ -62,7 +62,7 @@ const Navbar = () => {
               smooth={true}
               offset={-50}
               duration={50}
-              className={`${
+              className={`nav-link about ${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer nav-link about`}
               onClick={() => {
@@ -204,7 +204,7 @@ const Navbar = () => {
                   smooth={true}
                   offset={-50}
                   duration={50}
-                  className={`${
+                  className={`nav-link about ${
                     active ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer nav-link about`}
                   onClick={() => {
