@@ -80,7 +80,7 @@ const Navbar = () => {
               offset={-60}
               duration={50}
               className={`nav-link skills ${
-                active === "skills" ? "text-white" : "text-secondary"
+                active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer nav-link skills`}
               onClick={() => {
                 setActive("");
@@ -98,7 +98,7 @@ const Navbar = () => {
               offset={-80}
               duration={50}
               className={`nav-link projects ${
-                active === "projects" ? "text-white" : "text-secondary"
+                active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer nav-link projects`}
               onClick={() => {
                 setActive("");
@@ -134,7 +134,7 @@ const Navbar = () => {
               offset={-80}
               duration={50}
               className={`nav-link contact ${
-                active === "contact" ? "text-white" : "text-secondary"
+                active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer nav-link contact`}
               onClick={() => {
                 setActive("");
@@ -222,7 +222,7 @@ const Navbar = () => {
                   offset={-60}
                   duration={50}
                   className={`${
-                    active === "skills" ? "text-white" : "text-secondary"
+                    active ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer nav-link skills`}
                   onClick={() => {
                     setActive("");
@@ -240,7 +240,7 @@ const Navbar = () => {
                   offset={-80}
                   duration={50}
                   className={`${
-                    active === "project" ? "text-white" : "text-secondary"
+                    active ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer nav-link projects`}
                   onClick={() => {
                     setActive("");
@@ -258,7 +258,7 @@ const Navbar = () => {
                   offset={-80}
                   duration={50}
                   className={`${
-                    active === "statistics" ? "text-white" : "text-secondary"
+                    active ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer `}
                   onClick={() => {
                     setActive("");
@@ -276,7 +276,7 @@ const Navbar = () => {
                   offset={-70}
                   duration={50}
                   className={`${
-                    active === "contact" ? "text-white" : "text-secondary"
+                    active ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer nav-link contact`}
                   onClick={() => {
                     setActive("");
