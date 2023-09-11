@@ -12,8 +12,8 @@ const Skill = () => {
 
       <div className="flex flex-row flex-wrap justify-center gap-8 py-5 skills-card-name">
         {frontEnd.map((technology) => (
-          <div className="w-28 h-28  skills-card" key={technology.name}>
-            <BallCanvas icon={technology.icon} />
+          <div className="w-28 h-28" key={technology.name}>
+            <BallCanvas icon={technology.icon} className="skills-card" />
             <p className={`${styles.sectionSubText} skills-card-name`}>
               {technology.name}
             </p>
@@ -26,8 +26,10 @@ const Skill = () => {
       <div className="flex flex-row flex-wrap justify-center gap-8 py-5 ">
         {backendskill.map((technology) => (
           <div className="w-28 h-28 skills-card" key={technology.name}>
-            <BallCanvas icon={technology.icon} />
-            <p className={styles.sectionSubText}>{technology.name}</p>
+            <BallCanvas icon={technology.icon} className="skills-card" />
+            <p className={`${styles.sectionSubText} skills-card-name`}>
+              {technology.name}
+            </p>
           </div>
         ))}
       </div>
