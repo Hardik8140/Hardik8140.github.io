@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { styles } from "../style";
-import { Link } from "react-scroll";
+import { Link as ScrollLink, Element } from "react-scroll";
 import { logoNoBackground, menu, close, Resume } from "../assets";
+import { navLinks } from "../constants";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -17,7 +18,7 @@ const Navbar = () => {
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
+        <ScrollLink
           to="/"
           className="flex items-center gap-2 nav-link home"
           onClick={() => {
@@ -34,10 +35,30 @@ const Navbar = () => {
             Hardik &nbsp;
             <span className="sm:block hidden">| MERN Developer</span>
           </p>
-        </Link>
+        </ScrollLink>
 
-        <ul className="hidden lg:flex flex-row gap-10">
-          <li className="nav-link home">
+        <ul className="list-none hidden lg:flex flex-row gap-10">
+          {navLinks.map((el) => (
+            <li
+              key={el.id}
+              className={`${
+                active === el.title ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              onClick={() => setActive(el.title)}
+            >
+              <ScrollLink
+                to={el.id}
+                href={`#${el.id}`}
+                spy={el.spy}
+                smooth={el.smooth}
+                offset={el.offset}
+                duration={el.duration}
+              >
+                {el.title}
+              </ScrollLink>
+            </li>
+          ))}
+          {/* <li className="nav-link home">
             <Link
               to="/"
               spy={true}
@@ -144,9 +165,10 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
+          */}
           <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
             <button id="resume-button-1">
-              <Link
+              <ScrollLink
                 to={Resume}
                 target="_blank"
                 className={`${
@@ -160,7 +182,7 @@ const Navbar = () => {
                 download="Hardik-Gajera-Resume.pdf"
               >
                 Resume
-              </Link>
+              </ScrollLink>
             </button>
           </li>
         </ul>
@@ -180,7 +202,7 @@ const Navbar = () => {
           >
             <ul className="list-none flex justify-center items-start flex-col gap-4">
               <li>
-                <Link
+                <ScrollLink
                   to="/"
                   spy={true}
                   smooth={true}
@@ -195,10 +217,10 @@ const Navbar = () => {
                   }}
                 >
                   Home
-                </Link>
+                </ScrollLink>
               </li>
               <li className="nav-link about">
-                <Link
+                <ScrollLink
                   to="about"
                   spy={true}
                   smooth={true}
@@ -212,10 +234,10 @@ const Navbar = () => {
                   }}
                 >
                   About
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link
+                <ScrollLink
                   to="skills"
                   spy={true}
                   smooth={true}
@@ -230,10 +252,10 @@ const Navbar = () => {
                   }}
                 >
                   Skill
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link
+                <ScrollLink
                   to="projects"
                   spy={true}
                   smooth={true}
@@ -248,10 +270,10 @@ const Navbar = () => {
                   }}
                 >
                   Project
-                </Link>
+                </ScrollLink>
               </li>
               <li className="">
-                <Link
+                <ScrollLink
                   to="statistics"
                   spy={true}
                   smooth={true}
@@ -266,10 +288,10 @@ const Navbar = () => {
                   }}
                 >
                   Statistics
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link
+                <ScrollLink
                   to="contact"
                   spy={true}
                   smooth={true}
@@ -284,11 +306,11 @@ const Navbar = () => {
                   }}
                 >
                   Contact
-                </Link>
+                </ScrollLink>
               </li>
               <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
                 <button id="resume-button-1">
-                  <Link
+                  <ScrollLink
                     id="resume-link-1"
                     to={Resume}
                     target="_blank"
@@ -303,7 +325,7 @@ const Navbar = () => {
                     download="Hardik-Gajera-Resume.pdf"
                   >
                     Resume
-                  </Link>
+                  </ScrollLink>
                 </button>
               </li>
             </ul>
