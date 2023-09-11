@@ -198,7 +198,24 @@ const Navbar = () => {
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-center items-start flex-col gap-4">
-              <li>
+              {navLinks.map((el) => (
+                <li key={el.id} onClick={() => setActive(el.title)}>
+                  <ScrollLink
+                    className={`${
+                      active === el.title ? "text-white" : "text-secondary"
+                    } hover:text-white text-[18px] font-medium cursor-pointer`}
+                    to={el.id}
+                    href={`#${el.id}`}
+                    spy={el.spy}
+                    smooth={el.smooth}
+                    offset={el.offset}
+                    duration={el.duration}
+                  >
+                    {el.title}
+                  </ScrollLink>
+                </li>
+              ))}
+              {/* <li>
                 <ScrollLink
                   to="/"
                   spy={true}
@@ -216,7 +233,7 @@ const Navbar = () => {
                   Home
                 </ScrollLink>
               </li>
-              <li className="nav-link about">
+              <li>
                 <ScrollLink
                   to="about"
                   spy={true}
@@ -269,7 +286,7 @@ const Navbar = () => {
                   Project
                 </ScrollLink>
               </li>
-              <li className="">
+              <li>
                 <ScrollLink
                   to="statistics"
                   spy={true}
@@ -304,7 +321,8 @@ const Navbar = () => {
                 >
                   Contact
                 </ScrollLink>
-              </li>
+              </li> */}
+
               <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
                 <button id="resume-button-1">
                   <ScrollLink
