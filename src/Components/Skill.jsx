@@ -14,7 +14,9 @@ const Skill = () => {
         {frontEnd.map((technology) => (
           <div className="w-28 h-28  skills-card" key={technology.name}>
             <BallCanvas icon={technology.icon} />
-            <p className={`${styles.sectionSubText}`}>{technology.name}</p>
+            <p className={`${styles.sectionSubText} skills-card-name`}>
+              {technology.name}
+            </p>
           </div>
         ))}
       </div>
