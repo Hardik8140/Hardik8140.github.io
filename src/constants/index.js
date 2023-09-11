@@ -77,6 +77,7 @@ export const navLinks = [
     offset: -110,
     duration: 50,
     id: "statistics",
+    className: "nav-link statistics",
     title: "Statistics",
   },
   {
