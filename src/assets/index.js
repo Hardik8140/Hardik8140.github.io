@@ -39,13 +39,14 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import qeep from "./company/logo-white.png";
 import grow from "./company/grow.png";
+import furlinkoLogo from "./WhatsApp Image 2023-08-22 at 2.59.40 PM.jpeg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import qeepProject from "./qeep.png";
 import growFin from "./growFin.png";
-import furlinko from "./Furlinko.png";
+import furlinko from "./Furlinko";
 
 import hardik from "./hardik.png";
 import code from "./twotone-code.svg";
@@ -54,6 +55,7 @@ import done from "./cloud-done-outline.svg";
 import hours from "./shop-hours-outline.svg";
 
 export {
+  furlinkoLogo,
   furlinko,
   hours,
   done,

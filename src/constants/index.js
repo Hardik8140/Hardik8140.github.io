@@ -32,6 +32,7 @@ import {
   qeepProject,
   growFin,
   furlinko,
+  furlinkoLogo,
 } from "../assets";
 
 export const navLinks = [
@@ -172,7 +173,7 @@ const experiences = [
   {
     title: "Furlinko, The online Furniture Store",
     techStack: "HTML | CSS | JavaScript | React.Js | Redux | ChakraUi",
-    icon: qeep,
+    icon: furlinkoLogo,
     iconBg: "#383E56",
     date: "March 2020 - April 2021",
     image: furlinko,
