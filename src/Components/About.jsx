@@ -10,7 +10,7 @@ const About = () => {
       <div
         id="about"
         variants={textVariant()}
-        className={`${styles.paddingX} max-w-7xl mx-auto about section `}
+        className={`${styles.paddingX} max-w-7xl mx-auto about section`}
       >
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>About.</h2>
