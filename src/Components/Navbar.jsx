@@ -39,15 +39,11 @@ const Navbar = () => {
 
         <ul className=" sm: hidden lg:flex flex-row gap-10">
           {navLinks.map((el) => (
-            <li
-              key={el.id}
-              onClick={() => setActive(el.title)}
-              className={`${
-                active === el.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer `}
-            >
+            <li key={el.id} onClick={() => setActive(el.title)}>
               <ScrollLink
-                className={`${el.className}`}
+                className={`${
+                  active === el.title ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer `}
                 to={el.id}
                 href={`#${el.id}`}
                 spy={el.spy}
@@ -188,6 +184,8 @@ const Navbar = () => {
             </button>
           </li>
         </ul>
+
+        {/* //////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
         <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
