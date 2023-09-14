@@ -170,6 +170,7 @@ const Navbar = () => {
           <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
             <button id="resume-button-1">
               <ScrollLink
+                id="resume-link-1"
                 to={Resume}
                 target="_blank"
                 className={`${
