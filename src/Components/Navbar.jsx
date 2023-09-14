@@ -338,7 +338,7 @@ const Navbar = () => {
                     target="_blank"
                     className={`${
                       active ? "text-white" : "text-secondary"
-                    } hover:text-white text-[18px] font-medium cursor-pointer nav-link contact nav-link resume`}
+                    } hover:text-white text-[18px] font-medium cursor-pointer nav-link contact `}
                     onClick={(event) => {
                       event.preventDefault();
                       setActive();
