@@ -50,6 +50,10 @@ const Navbar = () => {
                 smooth={el.smooth}
                 offset={el.offset}
                 duration={el.duration}
+                onClick={() => {
+                  setActive(el.title);
+                  setToggle(false);
+                }}
               >
                 {el.title}
               </ScrollLink>
