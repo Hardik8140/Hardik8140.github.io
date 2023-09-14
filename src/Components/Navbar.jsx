@@ -37,7 +37,7 @@ const Navbar = () => {
           </p>
         </ScrollLink>
 
-        <ul className="list-none hidden lg:flex flex-row gap-10">
+        <ul className="list-none sm: hidden lg:flex flex-row gap-10">
           {navLinks.map((el) => (
             <li
               key={el.id}
