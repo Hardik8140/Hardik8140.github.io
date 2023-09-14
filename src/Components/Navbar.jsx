@@ -37,7 +37,7 @@ const Navbar = () => {
           </p>
         </ScrollLink>
 
-        <ul className="list-none sm: hidden lg:flex flex-row gap-10">
+        <ul className=" sm: hidden lg:flex flex-row gap-10">
           {navLinks.map((el) => (
             <li
               key={el.id}
@@ -333,7 +333,7 @@ const Navbar = () => {
               <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
                 <button>
                   <ScrollLink
-                    // id="resume-link-1"
+                    id="resume-link-1"
                     to={Resume}
                     target="_blank"
                     className={`${
