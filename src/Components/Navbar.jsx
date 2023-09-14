@@ -47,7 +47,7 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer `}
             >
               <ScrollLink
-                // className={`${el.className}`}
+                className={`${el.className}`}
                 to={el.id}
                 href={`#${el.id}`}
                 spy={el.spy}
@@ -205,7 +205,7 @@ const Navbar = () => {
               {navLinks.map((el) => (
                 <li key={el.id} onClick={() => setActive(el.title)}>
                   <ScrollLink
-                    className={`${el.className}`}
+                    // className={`${el.className}`}
                     // className={`${
                     //   active === el.title ? "text-white" : "text-secondary"
                     // } hover:text-white text-[18px] font-medium cursor-pointer ${
