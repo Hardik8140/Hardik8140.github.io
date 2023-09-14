@@ -204,12 +204,12 @@ const Navbar = () => {
               {navLinks.map((el) => (
                 <li key={el.id} onClick={() => setActive(el.title)}>
                   <ScrollLink
-                    className={`${el.className}`}
-                    // className={`${
-                    //   active === el.title ? "text-white" : "text-secondary"
-                    // } hover:text-white text-[18px] font-medium cursor-pointer ${
-                    //   el.className
-                    // }`}
+                    // className={`${el.className}`}
+                    className={`${
+                      active === el.title ? "text-white" : "text-secondary"
+                    } hover:text-white text-[18px] font-medium cursor-pointer ${
+                      el.className
+                    }`}
                     to={el.id}
                     href={`#${el.id}`}
                     spy={el.spy}
