@@ -47,8 +47,9 @@ const Navbar = () => {
 
         <ul className="sm:hidden lg:flex flex-row gap-10">
           {navLinks.map((el) => (
-            <li key={el.id} id="nav-links">
+            <li key={el.id}>
               <ScrollLink
+                id="nav-links"
                 className={`${
                   active === el.title ? "text-white" : "text-secondary"
                 } hover:text-white text-[18px] font-medium cursor-pointer ${
@@ -175,7 +176,7 @@ const Navbar = () => {
           </li>
           */}
           <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
-            <button id="resume-button-1 resume-button-main">
+            <button id="resume-button-1">
               <ScrollLink
                 id="resume-link-1"
                 to={Resume}
@@ -213,8 +214,9 @@ const Navbar = () => {
           >
             <ul className="list-none flex justify-center items-start flex-col gap-4">
               {navLinks.map((el) => (
-                <li key={el.id} id="nav-toggle-links">
+                <li key={el.id}>
                   <ScrollLink
+                    id="nav-toggle-links"
                     // className={`${el.className}`}
                     className={`${
                       active === el.title ? "text-white" : "text-secondary"
