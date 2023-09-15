@@ -45,9 +45,9 @@ const Navbar = () => {
           </p>
         </ScrollLink>
 
-        <ul id="nav-links" className="sm:hidden lg:flex flex-row gap-10">
+        <ul className="sm:hidden lg:flex flex-row gap-10">
           {navLinks.map((el) => (
-            <li key={el.id}>
+            <li key={el.id} id="nav-links">
               <ScrollLink
                 className={`${
                   active === el.title ? "text-white" : "text-secondary"
@@ -211,12 +211,9 @@ const Navbar = () => {
               !toggle ? "hidden" : "flex"
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
-            <ul
-              id="nav-toggle-links"
-              className="list-none flex justify-center items-start flex-col gap-4"
-            >
+            <ul className="list-none flex justify-center items-start flex-col gap-4">
               {navLinks.map((el) => (
-                <li key={el.id}>
+                <li key={el.id} id="nav-toggle-links">
                   <ScrollLink
                     // className={`${el.className}`}
                     className={`${
