@@ -3,7 +3,7 @@ import { styles } from "../style";
 import { Link as ScrollLink, Element } from "react-scroll";
 import { logoNoBackground, menu, close, Resume } from "../assets";
 import { navLinks } from "../constants";
-import styled from "styled-components";
+// import styled from "styled-components";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -32,7 +32,7 @@ const Navbar = () => {
       id="nav-menu"
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
     >
-      <NAVBAR className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <ScrollLink
           to="/"
           className="flex items-center gap-2 nav-link home"
@@ -104,7 +104,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="md:hidden lg:flex items-center">
+        <div className="sm:hidden md:hidden lg:flex items-center">
           <ul className="list-none flex justify-center items-start gap-4">
             {navLinks.map((el) => (
               <li key={el.id}>
@@ -128,17 +128,17 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-      </NAVBAR>
+      </div>
     </nav>
   );
 };
 export default Navbar;
 
-const NAVBAR = styled.div`
-  padding: 2px;
-  max-width: 1500px;
-  margin: auto;
-`;
+// const NAVBAR = styled.div`
+//   padding: 2px;
+//   max-width: 1500px;
+//   margin: auto;
+// `;
 
 {
   /* //////////////////////////////////////////////////////////////////////////////////////////////////// */
