@@ -123,6 +123,7 @@ const Navbar = () => {
             {navLinks.map((el) => (
               <ListItem key={el.id}>
                 <ScrollLink
+                  id={el.id}
                   className={`${
                     active === el.title ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer ${
@@ -186,9 +187,20 @@ const Navbar = () => {
             borderRadius="xl"
             minW="140px"
           >
-            {navLinks.map((el) => (
+            <ScrollLink
+              className={`${
+                active ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer `}
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              onClick={handleNavLinkClick}
+            >
+              About
+            </ScrollLink>
+            {/* {navLinks.map((el) => (
               <Box key={el.id}>
-                {/* <MenuItem key={el.id} bgGradient="linear(to, #434343,#000000)"> */}
                 <ScrollLink
                   className={`${
                     active === el.title ? "text-white" : "text-secondary"
@@ -203,9 +215,8 @@ const Navbar = () => {
                 >
                   {el.title}
                 </ScrollLink>
-                {/* </MenuItem> */}
               </Box>
-            ))}
+            ))} */}
           </MenuList>
         </Menu>
         {/* <div className="sm:hidden md:hidden lg:flex items-center">
