@@ -7,6 +7,7 @@ import { navLinks } from "../constants";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+
   const handleScrollToTop = () => {
     window.scrollTo(0, 0);
   };
@@ -46,7 +47,7 @@ const Navbar = () => {
 
         <ul className=" sm: hidden lg:flex flex-row gap-10">
           {navLinks.map((el) => (
-            <li key={el.id} onClick={() => handleNavLinkClick(el)}>
+            <li key={el.id}>
               <ScrollLink
                 className={`${
                   active === el.title ? "text-white" : "text-secondary"
@@ -59,10 +60,7 @@ const Navbar = () => {
                 smooth={el.smooth}
                 offset={el.offset}
                 duration={el.duration}
-                onClick={() => {
-                  setActive(el.title);
-                  setToggle(false);
-                }}
+                onClick={() => handleNavLinkClick(el)}
               >
                 {el.title}
               </ScrollLink>
@@ -215,7 +213,7 @@ const Navbar = () => {
           >
             <ul className="list-none flex justify-center items-start flex-col gap-4">
               {navLinks.map((el) => (
-                <li key={el.id} onClick={() => handleNavLinkClick(el)}>
+                <li key={el.id}>
                   <ScrollLink
                     // className={`${el.className}`}
                     className={`${
@@ -229,6 +227,7 @@ const Navbar = () => {
                     smooth={el.smooth}
                     offset={el.offset}
                     duration={el.duration}
+                    onClick={() => handleNavLinkClick(el)}
                   >
                     {el.title}
                   </ScrollLink>
