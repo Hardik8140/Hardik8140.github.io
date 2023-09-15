@@ -145,7 +145,7 @@ const Navbar = () => {
                 id="resume-link-1"
                 className={`${
                   active === "resume" ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer `}
+                } hover:text-white text-[18px] font-medium cursor-pointer nav-link resume`}
                 spy={true}
                 smooth={true}
                 offset={50}
