@@ -56,7 +56,7 @@ const Navbar = () => {
           />
         </div>
 
-        {/* <div
+        <div
           className={`${
             toggle ? "lg:hidden flex flex-1 justify-end items-center" : "hidden"
           } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
@@ -67,9 +67,7 @@ const Navbar = () => {
                 <ScrollLink
                   className={`${
                     active === el.title ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer ${
-                    el.className
-                  }`}
+                  } hover:text-white text-[18px] font-medium cursor-pointer`}
                   to={el.id}
                   href={`#${el.id}`}
                   spy={el.spy}
@@ -103,9 +101,9 @@ const Navbar = () => {
               </button>
             </li>
           </ul>
-        </div> */}
+        </div>
 
-        <div className=" lg:flex items-center">
+        <div className="sm:hidden lg:flex items-center">
           <ul className="list-none flex justify-center items-start gap-4">
             {navLinks.map((el) => (
               <li key={el.id}>
@@ -127,26 +125,6 @@ const Navbar = () => {
                 </ScrollLink>
               </li>
             ))}
-            <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
-              <button>
-                <ScrollLink
-                  id="resume-link-1"
-                  to={Resume}
-                  target="_blank"
-                  className={`${
-                    active ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer `}
-                  onClick={(event) => {
-                    event.preventDefault();
-                    setActive();
-                    window.open(Resume, "_blank");
-                  }}
-                  download="Hardik-Gajera-Resume.pdf"
-                >
-                  Resume
-                </ScrollLink>
-              </button>
-            </li>
           </ul>
         </div>
       </div>
