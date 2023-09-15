@@ -3,6 +3,7 @@ import { styles } from "../style";
 import { Link as ScrollLink, Element } from "react-scroll";
 import { logoNoBackground, menu, close, Resume } from "../assets";
 import { navLinks } from "../constants";
+import styled from "styled-components";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -31,7 +32,7 @@ const Navbar = () => {
       id="nav-menu"
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <NAVBAR className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <ScrollLink
           to="/"
           className="flex items-center gap-2 nav-link home"
@@ -103,7 +104,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="sm:hidden lg:flex items-center">
+        <div className="md:hidden lg:flex items-center">
           <ul className="list-none flex justify-center items-start gap-4">
             {navLinks.map((el) => (
               <li key={el.id}>
@@ -127,120 +128,24 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-      </div>
+      </NAVBAR>
+    </nav>
+  );
+};
+export default Navbar;
 
-      {/* <li className="nav-link home">
-            <Link
-              to="/"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-              className={`${
-                active === "Home" ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer `}
-              onClick={() => {
-                setActive("Home");
-                window.scrollTo(0, 0);
-              }}
-            >
-              Home
-            </Link>
-          </li>
-          <li className="nav-link about">
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-50}
-              duration={50}
-              className={` ${
-                active ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer `}
-              onClick={() => {
-                setActive("About");
-              }}
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="skills"
-              spy={true}
-              smooth={true}
-              offset={-60}
-              duration={50}
-              className={` ${
-                active ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link skills`}
-              onClick={() => {
-                setActive("");
-                window.scrollTo(0, 0);
-              }}
-            >
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="projects"
-              spy={true}
-              smooth={true}
-              offset={-80}
-              duration={50}
-              className={` ${
-                active ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link projects`}
-              onClick={() => {
-                setActive("");
-                window.scrollTo(0, 0);
-              }}
-            >
-              Project
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="statistics"
-              spy={true}
-              smooth={true}
-              offset={-80}
-              duration={50}
-              className={`${
-                active ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer `}
-              onClick={() => {
-                setActive("");
-                window.scrollTo(0, 0);
-              }}
-            >
-              Statistics
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-80}
-              duration={50}
-              className={` ${
-                active ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer nav-link contact`}
-              onClick={() => {
-                setActive("");
-                window.scrollTo(0, 0);
-              }}
-            >
-              Contact
-            </Link>
-          </li>
-          */}
+const NAVBAR = styled.div`
+  padding: 2px;
+  max-width: 1500px;
+  margin: auto;
+`;
 
-      {/* //////////////////////////////////////////////////////////////////////////////////////////////////// */}
+{
+  /* //////////////////////////////////////////////////////////////////////////////////////////////////// */
+}
 
-      {/* <div className="lg:hidden flex flex-1 justify-end items-center">
+{
+  /* <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -275,8 +180,10 @@ const Navbar = () => {
                     {el.title}
                   </ScrollLink>
                 </li>
-              ))} */}
-      {/* <li>
+              ))} */
+}
+{
+  /* <li>
                 <ScrollLink
                   to="/"
                   spy={true}
@@ -382,9 +289,11 @@ const Navbar = () => {
                 >
                   Contact
                 </ScrollLink>
-              </li> */}
+              </li> */
+}
 
-      {/* <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
+{
+  /* <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
                 <button>
                   <ScrollLink
                     id="resume-link-1"
@@ -406,9 +315,5 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-        </div> */}
-    </nav>
-  );
-};
-
-export default Navbar;
+        </div> */
+}
