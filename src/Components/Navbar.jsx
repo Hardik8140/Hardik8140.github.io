@@ -83,14 +83,14 @@ const Navbar = () => {
               </li>
             ))}
             <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
-              <button>
+              <button id="resume-button-1">
                 <ScrollLink
                   id="resume-link-1"
                   to={Resume}
                   target="_blank"
                   className={`${
                     active ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer `}
+                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link resume`}
                   onClick={(event) => {
                     event.preventDefault();
                     setActive();
