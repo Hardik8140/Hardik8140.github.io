@@ -140,6 +140,26 @@ const Navbar = () => {
                 </ScrollLink>
               </ListItem>
             ))}
+            <ListItem>
+              <ScrollLink
+                id="resume-link-1"
+                className={`${
+                  active === "resume" ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer `}
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                download="Hardik-Gajera-Resume.pdf"
+                onClick={(event) => {
+                  event.preventDefault();
+                  setActive();
+                  window.open(Resume, "_blank");
+                }}
+              >
+                Resume
+              </ScrollLink>
+            </ListItem>
           </UnorderedList>
         </Box>
 
