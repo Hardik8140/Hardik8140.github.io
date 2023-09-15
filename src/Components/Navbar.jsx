@@ -61,7 +61,7 @@ const Navbar = () => {
             toggle ? "lg:hidden flex flex-1 justify-end items-center" : "hidden"
           } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
         >
-          <ul className="list-none flex justify-center items-start flex-col gap-4">
+          <ul className="list-none flex flex-col gap-4">
             {navLinks.map((el) => (
               <li key={el.id}>
                 <ScrollLink
@@ -105,7 +105,53 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* <li className="nav-link home">
+        <div className="sm:hidden lg:flex items-center">
+          <ul className="list-none flex justify-center items-start gap-4">
+            {navLinks.map((el) => (
+              <li key={el.id}>
+                <ScrollLink
+                  className={`${
+                    active === el.title ? "text-white" : "text-secondary"
+                  } hover:text-white text-[18px] font-medium cursor-pointer ${
+                    el.className
+                  }`}
+                  to={el.id}
+                  href={`#${el.id}`}
+                  spy={el.spy}
+                  smooth={el.smooth}
+                  offset={el.offset}
+                  duration={el.duration}
+                  onClick={() => handleNavLinkClick(el)}
+                >
+                  {el.title}
+                </ScrollLink>
+              </li>
+            ))}
+            <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
+              <button>
+                <ScrollLink
+                  id="resume-link-1"
+                  to={Resume}
+                  target="_blank"
+                  className={`${
+                    active ? "text-white" : "text-secondary"
+                  } hover:text-white text-[18px] font-medium cursor-pointer `}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setActive();
+                    window.open(Resume, "_blank");
+                  }}
+                  download="Hardik-Gajera-Resume.pdf"
+                >
+                  Resume
+                </ScrollLink>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* <li className="nav-link home">
             <Link
               to="/"
               spy={true}
@@ -214,9 +260,9 @@ const Navbar = () => {
           </li>
           */}
 
-        {/* //////////////////////////////////////////////////////////////////////////////////////////////////// */}
+      {/* //////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
-        {/* <div className="lg:hidden flex flex-1 justify-end items-center">
+      {/* <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -252,7 +298,7 @@ const Navbar = () => {
                   </ScrollLink>
                 </li>
               ))} */}
-        {/* <li>
+      {/* <li>
                 <ScrollLink
                   to="/"
                   spy={true}
@@ -360,7 +406,7 @@ const Navbar = () => {
                 </ScrollLink>
               </li> */}
 
-        {/* <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
+      {/* <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
                 <button>
                   <ScrollLink
                     id="resume-link-1"
@@ -383,7 +429,6 @@ const Navbar = () => {
             </ul>
           </div>
         </div> */}
-      </div>
     </nav>
   );
 };
