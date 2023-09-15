@@ -43,7 +43,9 @@ const Navbar = () => {
               <ScrollLink
                 className={`${
                   active === el.title ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer `}
+                } hover:text-white text-[18px] font-medium cursor-pointer ${
+                  el.className
+                } `}
                 to={el.id}
                 href={`#${el.id}`}
                 spy={el.spy}
