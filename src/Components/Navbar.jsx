@@ -7,7 +7,17 @@ import { navLinks } from "../constants";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const handleScrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
 
+  const handleNavLinkClick = (el) => {
+    setActive(el.title);
+    setToggle(false);
+    if (el.scrollToTop) {
+      handleScrollToTop();
+    }
+  };
   // const scrollToTop = () => {
   //   window.scrollTo(0, 0);
   // };
@@ -21,10 +31,7 @@ const Navbar = () => {
         <ScrollLink
           to="/"
           className="flex items-center gap-2 nav-link home"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
+          onClick={handleScrollToTop}
         >
           <img
             src={logoNoBackground}
@@ -39,7 +46,7 @@ const Navbar = () => {
 
         <ul className=" sm: hidden lg:flex flex-row gap-10">
           {navLinks.map((el) => (
-            <li key={el.id} onClick={() => setActive(el.title)}>
+            <li key={el.id} onClick={() => handleNavLinkClick(el)}>
               <ScrollLink
                 className={`${
                   active === el.title ? "text-white" : "text-secondary"
@@ -208,7 +215,7 @@ const Navbar = () => {
           >
             <ul className="list-none flex justify-center items-start flex-col gap-4">
               {navLinks.map((el) => (
-                <li key={el.id} onClick={() => setActive(el.title)}>
+                <li key={el.id} onClick={() => handleNavLinkClick(el)}>
                   <ScrollLink
                     // className={`${el.className}`}
                     className={`${
