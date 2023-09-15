@@ -150,7 +150,11 @@ const Statistics = () => {
           <h2 className={`${styles.sectionSubText} mt-9 mb-9`}>
             GitHub Calender.
           </h2>
-          <GitHubCalendar username="hardik8140" className="m-auto" />
+          <GitHubCalendar
+            username="hardik8140"
+            year={2023}
+            className="m-auto"
+          />
         </div>
         {/* </Tilt> */}
 

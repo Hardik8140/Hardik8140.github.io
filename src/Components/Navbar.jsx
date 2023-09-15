@@ -3,6 +3,15 @@ import { styles } from "../style";
 import { Link as ScrollLink, Element } from "react-scroll";
 import { logoNoBackground, menu, close, Resume } from "../assets";
 import { navLinks } from "../constants";
+import {
+  Box,
+  ListItem,
+  Menu,
+  MenuButton,
+  MenuList,
+  UnorderedList,
+  Image,
+} from "@chakra-ui/react";
 // import styled from "styled-components";
 
 const Navbar = () => {
@@ -48,16 +57,16 @@ const Navbar = () => {
             <span className="sm:block hidden">| MERN Developer</span>
           </p>
         </ScrollLink>
-        <div className="lg:hidden flex items-center">
+        {/* <div className="lg:hidden flex items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
             className="w-[20px] h-[28px] object-contain cursor-pointer"
             onClick={toggleMenu}
           />
-        </div>
+        </div> */}
 
-        <div
+        {/* <div
           className={`${
             toggle
               ? "lg:hidden md:flex flex-1 justify-end items-center"
@@ -104,9 +113,82 @@ const Navbar = () => {
               </button>
             </li>
           </ul>
-        </div>
+        </div> */}
+        <Box>
+          <UnorderedList
+            styleType="none"
+            display={{ base: "none", md: "none", lg: "flex" }}
+            gap={10}
+          >
+            {navLinks.map((el) => (
+              <ListItem key={el.id}>
+                <ScrollLink
+                  className={`${
+                    active === el.title ? "text-white" : "text-secondary"
+                  } hover:text-white text-[18px] font-medium cursor-pointer ${
+                    el.className
+                  }`}
+                  to={el.id}
+                  href={`#${el.id}`}
+                  spy={el.spy}
+                  smooth={el.smooth}
+                  offset={el.offset}
+                  duration={el.duration}
+                  onClick={() => handleNavLinkClick(el)}
+                >
+                  {el.title}
+                </ScrollLink>
+              </ListItem>
+            ))}
+          </UnorderedList>
+        </Box>
 
-        <div className="sm:hidden md:hidden lg:flex items-center">
+        <Menu>
+          <MenuButton
+            mr={{ md: "-12", lg: "-12" }}
+            display={{
+              base: "block",
+              sm: "block",
+              md: "block",
+              lg: "none",
+            }}
+          >
+            {toggle ? (
+              <Image src={close} alt="close" onClick={toggleMenu} />
+            ) : (
+              <Image src={menu} alt="menu" onClick={toggleMenu} />
+            )}
+          </MenuButton>
+          <MenuList
+            p={6}
+            bgGradient="linear(to-r, #434343,#000000)"
+            border="none"
+            borderRadius="xl"
+            minW="140px"
+          >
+            {navLinks.map((el) => (
+              <Box key={el.id}>
+                {/* <MenuItem key={el.id} bgGradient="linear(to, #434343,#000000)"> */}
+                <ScrollLink
+                  className={`${
+                    active === el.title ? "text-white" : "text-secondary"
+                  } hover:text-white text-[18px] font-medium cursor-pointer `}
+                  to={el.id}
+                  href={`#${el.id}`}
+                  spy={el.spy}
+                  smooth={el.smooth}
+                  offset={el.offset}
+                  duration={el.duration}
+                  onClick={() => handleNavLinkClick(el)}
+                >
+                  {el.title}
+                </ScrollLink>
+                {/* </MenuItem> */}
+              </Box>
+            ))}
+          </MenuList>
+        </Menu>
+        {/* <div className="sm:hidden md:hidden lg:flex items-center">
           <ul className="list-none flex justify-center items-start gap-4">
             {navLinks.map((el) => (
               <li key={el.id}>
@@ -129,7 +211,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </div>
     </nav>
   );
