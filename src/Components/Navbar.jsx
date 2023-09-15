@@ -345,7 +345,7 @@ const Navbar = () => {
               </li> */}
 
               <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
-                <button>
+                <button id="resume-button-2">
                   <ScrollLink
                     id="resume-link-1"
                     to={Resume}
