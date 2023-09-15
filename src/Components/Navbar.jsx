@@ -56,7 +56,7 @@ const Navbar = () => {
           />
         </div>
 
-        <div
+        {/* <div
           className={`${
             toggle ? "lg:hidden flex flex-1 justify-end items-center" : "hidden"
           } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
@@ -103,9 +103,9 @@ const Navbar = () => {
               </button>
             </li>
           </ul>
-        </div>
+        </div> */}
 
-        <div className="sm:hidden lg:flex items-center">
+        <div className=" lg:flex items-center">
           <ul className="list-none flex justify-center items-start gap-4">
             {navLinks.map((el) => (
               <li key={el.id}>
