@@ -166,7 +166,7 @@ const Statistics = () => {
           <a href="https://git.io/streak-stats">
             <img
               id="github-streak-stats"
-              src="https://github-readme-streak-stats.herokuapp.com?user=Hardik8140&theme=transparent"
+              src="https://github-readme-streak-stats.herokuapp.com?user=Hardik8140&theme=transparent&border_radius=15"
             />
           </a>
         </div>

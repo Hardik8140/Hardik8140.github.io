@@ -140,6 +140,7 @@ const Navbar = () => {
                   duration={el.duration}
                   onClick={() => {
                     handleNavLinkClick(el);
+                    setToggle(false);
                   }}
                 >
                   {el.title}
