@@ -27,9 +27,6 @@ const Navbar = () => {
   const handleNavLinkClick = (el) => {
     setActive(el.title);
     setToggle(false);
-    if (el.scrollToTop) {
-      handleScrollToTop();
-    }
   };
   // const scrollToTop = () => {
   //   window.scrollTo(0, 0);
@@ -71,7 +68,6 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer ${
                 el.className
               }`}
-              // className={el.className}
               key={el.title}
               to={el.id}
               href={`#${el.id}`}
@@ -131,17 +127,17 @@ const Navbar = () => {
             minW="140px"
           >
             {navLinks.map((el) => (
-              <Box key={el.id}>
+              <Box key={el.id} pb={2}>
                 <ScrollLink
                   download="Hardik-Gajera-Resume.pdf"
                   className={`${
                     active === el.title ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer `}
                   to={el.id}
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
+                  spy={el.spy}
+                  smooth={el.smooth}
+                  offset={el.offset}
+                  duration={el.duration}
                   onClick={() => {
                     handleNavLinkClick(el);
                   }}
