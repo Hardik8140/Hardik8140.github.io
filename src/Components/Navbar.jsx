@@ -111,9 +111,9 @@ const Navbar = () => {
           <MenuButton
             mr={{ md: "-12", lg: "-12" }}
             display={{
-              base: "block",
-              sm: "block",
-              md: "block",
+              base: "flex",
+              sm: "flex",
+              md: "flex",
               lg: "none",
             }}
           >
