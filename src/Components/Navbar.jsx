@@ -75,6 +75,9 @@ const Navbar = () => {
               {el.title}
             </ScrollLink>
           ))}
+          <ScrollLink className="nav-link resume" id="resume-link-1">
+            Resume
+          </ScrollLink>
         </HStack>
 
         {/* <UnorderedList
