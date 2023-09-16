@@ -59,7 +59,7 @@ const Navbar = () => {
           </p>
         </ScrollLink>
 
-        <HStack display={{ base: "none", sm: "none", md: "none", lg: "flex" }}>
+        <HStack display={{ base: "none", sm: "none", md: "flex", lg: "flex" }}>
           {navLinks.map((el) => (
             <ScrollLink
               className={el.className}
@@ -135,7 +135,7 @@ const Navbar = () => {
             display={{
               base: "flex",
               sm: "flex",
-              md: "flex",
+              md: "none",
               lg: "none",
             }}
             onClick={toggleMenu}
@@ -158,7 +158,9 @@ const Navbar = () => {
                 <ScrollLink
                   className={`${
                     active ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer `}
+                  } hover:text-white text-[18px] font-medium cursor-pointer ${
+                    el.className
+                  }`}
                   spy={true}
                   smooth={true}
                   offset={50}
