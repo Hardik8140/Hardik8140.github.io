@@ -64,13 +64,15 @@ const Navbar = () => {
           gap={10}
         >
           {navLinks.map((el) => (
-            <ListItem key={el.id}>
+            <ListItem
+              key={el.id}
+              className={`${
+                active === el.title ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer ${
+                el.className
+              }`}
+            >
               <ScrollLink
-                className={`${
-                  active === el.title ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer ${
-                  el.className
-                }`}
                 to={el.id}
                 href={`#${el.id}`}
                 spy={el.spy}
