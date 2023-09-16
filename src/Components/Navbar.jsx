@@ -135,9 +135,7 @@ const Navbar = () => {
                 <ScrollLink
                   className={`${
                     active ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer ${
-                    el.className
-                  }`}
+                  } hover:text-white text-[18px] font-medium cursor-pointer `}
                   spy={true}
                   smooth={true}
                   offset={50}
