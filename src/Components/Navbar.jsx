@@ -134,7 +134,7 @@ const Navbar = () => {
             mr={{ md: "-12", lg: "-12" }}
             display={{
               base: "flex",
-              sm: "flex",
+              sm: "none",
               md: "none",
               lg: "none",
             }}
