@@ -59,7 +59,7 @@ const Navbar = () => {
           </p>
         </ScrollLink>
 
-        <HStack display={{ base: "none", sm: "none", md: "flex", lg: "flex" }}>
+        <HStack display={{ base: "none", sm: "flex", md: "flex", lg: "flex" }}>
           {navLinks.map((el) => (
             <ScrollLink
               className={el.className}
@@ -158,9 +158,7 @@ const Navbar = () => {
                 <ScrollLink
                   className={`${
                     active ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer ${
-                    el.className
-                  }`}
+                  } hover:text-white text-[18px] font-medium cursor-pointer `}
                   spy={true}
                   smooth={true}
                   offset={50}
