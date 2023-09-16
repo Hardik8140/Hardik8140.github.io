@@ -45,7 +45,7 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <ScrollLink
           to="/"
-          className="flex items-center gap-2 nav-link home"
+          className="flex items-center gap-2"
           onClick={handleScrollToTop}
         >
           <img
