@@ -153,7 +153,7 @@ const Statistics = () => {
           <GitHubCalendar
             username="hardik8140"
             year={2023}
-            className="m-auto"
+            className="m-auto react-activity-calendar"
           />
         </div>
         {/* </Tilt> */}
@@ -166,7 +166,7 @@ const Statistics = () => {
           <a href="https://git.io/streak-stats">
             <img
               id="github-streak-stats"
-              src="https://streak-stats.demolab.com?user=hardik8140&theme=cobalt&border_radius=12.5"
+              src="https://github-readme-streak-stats.herokuapp.com?user=Hardik8140&theme=transparent"
             />
           </a>
         </div>

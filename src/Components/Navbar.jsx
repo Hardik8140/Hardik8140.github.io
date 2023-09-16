@@ -89,8 +89,15 @@ const Navbar = () => {
             id="resume-button-1"
           >
             <ScrollLink
+              to={Resume}
+              download="Hardik-Gajera-Resume.pdf"
+              onClick={(event) => {
+                event.preventDefault();
+                window.open(Resume, "_blank");
+              }}
+              target="_blank"
               className={`${
-                active === "resume" ? "text-white" : "text-secondary"
+                active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer nav-link resume`}
               id="resume-link-1"
             >
@@ -126,16 +133,17 @@ const Navbar = () => {
             {navLinks.map((el) => (
               <Box key={el.id}>
                 <ScrollLink
+                  download="Hardik-Gajera-Resume.pdf"
                   className={`${
-                    active ? "text-white" : "text-secondary"
+                    active === el.title ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer `}
+                  to={el.id}
                   spy={true}
                   smooth={true}
                   offset={50}
                   duration={500}
                   onClick={() => {
                     handleNavLinkClick(el);
-                    toggleMenu();
                   }}
                 >
                   {el.title}
