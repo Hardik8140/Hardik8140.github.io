@@ -57,112 +57,53 @@ const Navbar = () => {
             <span className="sm:block hidden">| MERN Developer</span>
           </p>
         </ScrollLink>
-        {/* <div className="lg:hidden flex items-center">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[20px] h-[28px] object-contain cursor-pointer"
-            onClick={toggleMenu}
-          />
-        </div> */}
 
-        {/* <div
-          className={`${
-            toggle
-              ? "lg:hidden md:flex flex-1 justify-end items-center"
-              : "hidden"
-          } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+        <UnorderedList
+          styleType="none"
+          display={{ base: "none", sm: "none", md: "none", lg: "flex" }}
+          gap={10}
         >
-          <ul className="list-none flex flex-col gap-4">
-            {navLinks.map((el) => (
-              <li key={el.id}>
-                <ScrollLink
-                  className={`${
-                    active === el.title ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer`}
-                  to={el.id}
-                  href={`#${el.id}`}
-                  spy={el.spy}
-                  smooth={el.smooth}
-                  offset={el.offset}
-                  duration={el.duration}
-                  onClick={() => handleNavLinkClick(el)}
-                >
-                  {el.title}
-                </ScrollLink>
-              </li>
-            ))}
-            <li className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
-              <button id="resume-button-1">
-                <ScrollLink
-                  id="resume-link-1"
-                  to={Resume}
-                  target="_blank"
-                  className={`${
-                    active ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer nav-link resume`}
-                  onClick={(event) => {
-                    event.preventDefault();
-                    setActive();
-                    window.open(Resume, "_blank");
-                  }}
-                  download="Hardik-Gajera-Resume.pdf"
-                >
-                  Resume
-                </ScrollLink>
-              </button>
-            </li>
-          </ul>
-        </div> */}
-        <Box>
-          <UnorderedList
-            styleType="none"
-            display={{ base: "none", md: "none", lg: "flex" }}
-            gap={10}
-          >
-            {navLinks.map((el) => (
-              <ListItem key={el.id}>
-                <ScrollLink
-                  id={el.id}
-                  className={`${
-                    active === el.title ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer ${
-                    el.className
-                  }`}
-                  to={el.id}
-                  href={`#${el.id}`}
-                  spy={el.spy}
-                  smooth={el.smooth}
-                  offset={el.offset}
-                  duration={el.duration}
-                  onClick={() => handleNavLinkClick(el)}
-                >
-                  {el.title}
-                </ScrollLink>
-              </ListItem>
-            ))}
-            <ListItem>
+          {navLinks.map((el) => (
+            <ListItem key={el.id}>
               <ScrollLink
-                id="resume-link-1"
                 className={`${
-                  active === "resume" ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer nav-link resume`}
-                spy={true}
-                smooth={true}
-                offset={50}
-                duration={500}
-                download="Hardik-Gajera-Resume.pdf"
-                onClick={(event) => {
-                  event.preventDefault();
-                  setActive();
-                  window.open(Resume, "_blank");
-                }}
+                  active === el.title ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer ${
+                  el.className
+                }`}
+                to={el.id}
+                href={`#${el.id}`}
+                spy={el.spy}
+                smooth={el.smooth}
+                offset={el.offset}
+                duration={el.duration}
+                onClick={() => handleNavLinkClick(el)}
               >
-                Resume
+                {el.title}
               </ScrollLink>
             </ListItem>
-          </UnorderedList>
-        </Box>
+          ))}
+          <ListItem>
+            <ScrollLink
+              id="resume-link-1"
+              className={`${
+                active === "resume" ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer nav-link resume`}
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              download="Hardik-Gajera-Resume.pdf"
+              onClick={(event) => {
+                event.preventDefault();
+                setActive();
+                window.open(Resume, "_blank");
+              }}
+            >
+              Resume
+            </ScrollLink>
+          </ListItem>
+        </UnorderedList>
 
         <Menu>
           <MenuButton
