@@ -11,6 +11,7 @@ import {
   MenuList,
   UnorderedList,
   Image,
+  HStack,
 } from "@chakra-ui/react";
 // import styled from "styled-components";
 
@@ -58,7 +59,25 @@ const Navbar = () => {
           </p>
         </ScrollLink>
 
-        <UnorderedList
+        <HStack display={{ base: "none", sm: "none", md: "none", lg: "flex" }}>
+          {navLinks.map((el) => (
+            <ScrollLink
+              className={el.className}
+              key={el.title}
+              to={el.id}
+              href={`#${el.id}`}
+              spy={el.spy}
+              smooth={el.smooth}
+              offset={el.offset}
+              duration={el.duration}
+              onClick={() => handleNavLinkClick(el)}
+            >
+              {el.title}
+            </ScrollLink>
+          ))}
+        </HStack>
+
+        {/* <UnorderedList
           styleType="none"
           display={{ base: "none", sm: "none", md: "none", lg: "flex" }}
           gap={10}
@@ -105,7 +124,7 @@ const Navbar = () => {
               Resume
             </ScrollLink>
           </ListItem>
-        </UnorderedList>
+        </UnorderedList> */}
 
         <Menu>
           <MenuButton
