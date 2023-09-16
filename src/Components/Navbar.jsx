@@ -130,18 +130,24 @@ const Navbar = () => {
             borderRadius="xl"
             minW="140px"
           >
-            <ScrollLink
-              className={`${
-                active ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer `}
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-              onClick={handleNavLinkClick}
-            >
-              About
-            </ScrollLink>
+            {navLinks.map((el) => (
+              <Box key={el.id}>
+                <ScrollLink
+                  className={`${
+                    active ? "text-white" : "text-secondary"
+                  } hover:text-white text-[18px] font-medium cursor-pointer ${
+                    el.className
+                  }`}
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  onClick={handleNavLinkClick}
+                >
+                  {el.title}
+                </ScrollLink>
+              </Box>
+            ))}
             {/* {navLinks.map((el) => (
               <Box key={el.id}>
                 <ScrollLink
