@@ -129,7 +129,7 @@ const Navbar = () => {
           </ListItem>
         </UnorderedList> */}
 
-        <Menu>
+        <Menu isOpen={toggle}>
           <MenuButton
             mr={{ md: "-12", lg: "-12" }}
             display={{
@@ -138,6 +138,7 @@ const Navbar = () => {
               md: "flex",
               lg: "none",
             }}
+            onClick={toggleMenu}
           >
             {toggle ? (
               <Image src={close} alt="close" onClick={toggleMenu} />
@@ -162,7 +163,10 @@ const Navbar = () => {
                   smooth={true}
                   offset={50}
                   duration={500}
-                  onClick={handleNavLinkClick}
+                  onClick={() => {
+                    handleNavLinkClick(el);
+                    toggleMenu(); // Close the menu after clicking a link
+                  }}
                 >
                   {el.title}
                 </ScrollLink>
