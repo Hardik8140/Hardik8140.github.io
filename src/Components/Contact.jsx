@@ -3,6 +3,17 @@ import { styles } from "../style";
 import { SectionWrapper } from "../hoc";
 import emailjs from "@emailjs/browser";
 import { Location, email, github, linkedin, phone } from "../assets";
+import {
+  useDisclosure,
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
+  Button,
+  Box,
+} from "@chakra-ui/react";
 
 const Contact = () => {
   const formRef = useRef();
@@ -11,6 +22,13 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const cancelRef = React.useRef();
 
   const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
@@ -20,10 +38,34 @@ const Contact = () => {
       ...form,
       [name]: value,
     });
+
+    setErrors({
+      ...errors,
+      [name]: "",
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Input validation
+    const newErrors = {};
+    if (!form.name) {
+      newErrors.name = "Name is required";
+    }
+    if (!form.email) {
+      newErrors.email = "Email is required";
+    }
+    if (!form.message) {
+      newErrors.message = "Message is required";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      // If there are validation errors, set the errors state and return
+      setErrors(newErrors);
+      return;
+    }
+
     setLoading(true);
 
     emailjs
@@ -42,8 +84,8 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
+          // alert("Thank you. I will get back to you as soon as possible.");
+          onOpen();
           setForm({
             name: "",
             email: "",
@@ -58,6 +100,7 @@ const Contact = () => {
         }
       );
   };
+
   return (
     <div
       id="contact"
@@ -80,8 +123,13 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${
+                errors.name ? "border-red-500" : ""
+              }`}
             />
+            {errors.name && (
+              <p className="text-red-500 text-sm mt-2">{errors.name}</p>
+            )}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your email</span>
@@ -91,8 +139,13 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${
+                errors.email ? "border-red-500" : ""
+              }`}
             />
+            {errors.email && (
+              <p className="text-red-500 text-sm mt-2">{errors.email}</p>
+            )}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
@@ -102,8 +155,13 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="What you want to say?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${
+                errors.message ? "border-red-500" : ""
+              }`}
             />
+            {errors.message && (
+              <p className="text-red-500 text-sm mt-2">{errors.message}</p>
+            )}
           </label>
 
           <button
@@ -114,6 +172,38 @@ const Contact = () => {
           </button>
         </form>
       </div>
+
+      <Box>
+        <AlertDialog
+          colorScheme="#434343"
+          isOpen={isOpen}
+          leastDestructiveRef={cancelRef}
+          onClose={onClose}
+        >
+          <AlertDialogOverlay>
+            <AlertDialogContent>
+              <AlertDialogHeader fontSize="lg" fontWeight="bold">
+                Message Sent
+              </AlertDialogHeader>
+
+              <AlertDialogBody>
+                Thank you. I will get back to you as soon as possible.
+              </AlertDialogBody>
+
+              <AlertDialogFooter>
+                <Button
+                  ref={cancelRef}
+                  onClick={onClose}
+                  colorScheme="teal"
+                  variant="outline"
+                >
+                  Close
+                </Button>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialogOverlay>
+        </AlertDialog>
+      </Box>
 
       <div className="flex-[0.65] bg-black-100 p-8 rounded-2xl ">
         <p className={styles.sectionSubText}>Feel Free to Connect With me</p>
