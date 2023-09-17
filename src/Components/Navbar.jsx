@@ -147,6 +147,26 @@ const Navbar = () => {
                 </ScrollLink>
               </Box>
             ))}
+            <button
+              className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary"
+              id="resume-button-1"
+            >
+              <ScrollLink
+                to={Resume}
+                download="Hardik-Gajera-Resume.pdf"
+                onClick={(event) => {
+                  event.preventDefault();
+                  window.open(Resume, "_blank");
+                }}
+                target="_blank"
+                className={`${
+                  active ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer nav-link resume`}
+                id="resume-link-1"
+              >
+                Resume
+              </ScrollLink>
+            </button>
           </MenuList>
         </Menu>
       </div>
