@@ -163,8 +163,8 @@ const Navbar = () => {
                 onClick={handleResumeButtonClick}
                 className={`${
                   active ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer nav-link resume`}
-                id="resume-link-1"
+                } hover:text-white text-[18px] font-medium cursor-pointer `}
+                // id="resume-link-1"
               >
                 Resume
               </ScrollLink>
