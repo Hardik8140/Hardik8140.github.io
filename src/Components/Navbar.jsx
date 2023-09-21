@@ -28,18 +28,6 @@ const Navbar = () => {
     setActive(el.title);
     setToggle(false);
   };
-
-  // const handleResumeButtonClick = () => {
-  //   const link = document.createElement("a");
-  //   link.href = Resume;
-  //   link.download = "Hardik-Gajera-Resume.pdf";
-  //   link.target = "_blank";
-  //   document.body.appendChild(link);
-  //   link.click();
-  //   document.body.removeChild(link);
-
-  //   window.open(Resume, "_blank");
-  // };
   // const scrollToTop = () => {
   //   window.scrollTo(0, 0);
   // };
@@ -56,7 +44,7 @@ const Navbar = () => {
         <ScrollLink
           to="/"
           className="flex items-center gap-2"
-          // onClick={handleScrollToTop}
+          onClick={handleScrollToTop}
         >
           <img
             src={logoNoBackground}
@@ -92,17 +80,18 @@ const Navbar = () => {
               {el.title}
             </ScrollLink>
           ))}
-
           <button
             className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary"
             id="resume-button-1"
           >
             <ScrollLink
               to={Resume}
-              href={Resume}
-              target="_blank"
               download="Hardik-Gajera-Resume.pdf"
-              onClick={window.open(Resume, "_blank")}
+              onClick={(event) => {
+                event.preventDefault();
+                window.open(Resume, "_blank");
+              }}
+              target="_blank"
               className={`${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer nav-link resume`}
@@ -140,6 +129,7 @@ const Navbar = () => {
             {navLinks.map((el) => (
               <Box key={el.id} pb={2}>
                 <ScrollLink
+                  download="Hardik-Gajera-Resume.pdf"
                   className={`${
                     active === el.title ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer `}
@@ -159,18 +149,20 @@ const Navbar = () => {
             ))}
             <button
               className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary"
-              // id="resume-button-1"
+              id="resume-button-1"
             >
               <ScrollLink
                 to={Resume}
-                href={Resume}
-                target="_blank"
                 download="Hardik-Gajera-Resume.pdf"
-                onClick={window.open(Resume, "_blank")}
+                onClick={(event) => {
+                  event.preventDefault();
+                  window.open(Resume, "_blank");
+                }}
+                target="_blank"
                 className={`${
                   active ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer `}
-                // id="resume-link-1"
+                } hover:text-white text-[18px] font-medium cursor-pointer nav-link resume`}
+                id="resume-link-1"
               >
                 Resume
               </ScrollLink>
