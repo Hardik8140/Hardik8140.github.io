@@ -156,7 +156,7 @@ const Navbar = () => {
             ))}
             <button
               className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary"
-              id="resume-button-1"
+              // id="resume-button-1"
             >
               <ScrollLink
                 to={Resume}
