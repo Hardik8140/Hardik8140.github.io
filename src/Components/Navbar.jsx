@@ -167,20 +167,9 @@ const Navbar = () => {
               <ScrollLink
                 to={Resume}
                 download="Hardik-Gajera-Resume.pdf"
-                // onClick={(event) => {
-                //   event.preventDefault();
-                //   window.open(Resume, "_blank");
-                // }}
                 onClick={(event) => {
                   event.preventDefault();
                   window.open(Resume, "_blank");
-                  const a = document.createElement("a");
-                  a.style.display = "none";
-                  a.href = Resume;
-                  a.download = "Hardik-Gajera-Resume.pdf";
-                  document.body.appendChild(a);
-                  a.click();
-                  document.body.removeChild(a);
                 }}
                 target="_blank"
                 className={`${
