@@ -149,7 +149,7 @@ const Navbar = () => {
             ))}
             <button
               className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary"
-              id="resume-button-1"
+              // id="resume-button-1"
             >
               <ScrollLink
                 to={Resume}
@@ -161,8 +161,8 @@ const Navbar = () => {
                 target="_blank"
                 className={`${
                   active ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer nav-link resume`}
-                id="resume-link-1"
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                // id="resume-link-1"
               >
                 Resume
               </ScrollLink>
