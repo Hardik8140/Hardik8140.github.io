@@ -28,6 +28,18 @@ const Navbar = () => {
     setActive(el.title);
     setToggle(false);
   };
+
+  const handleResumeButtonClick = () => {
+    window.open(Resume, "_blank");
+
+    const link = document.createElement("a");
+    link.href = Resume;
+    link.download = "Hardik-Gajera-Resume.pdf";
+    link.target = "_blank";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   // const scrollToTop = () => {
   //   window.scrollTo(0, 0);
   // };
@@ -44,7 +56,7 @@ const Navbar = () => {
         <ScrollLink
           to="/"
           className="flex items-center gap-2"
-          onClick={handleScrollToTop}
+          // onClick={handleScrollToTop}
         >
           <img
             src={logoNoBackground}
@@ -86,12 +98,7 @@ const Navbar = () => {
           >
             <ScrollLink
               to={Resume}
-              download="Hardik-Gajera-Resume.pdf"
-              onClick={(event) => {
-                event.preventDefault();
-                window.open(Resume, "_blank");
-              }}
-              target="_blank"
+              onClick={handleResumeButtonClick}
               className={`${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer nav-link resume`}
@@ -153,12 +160,7 @@ const Navbar = () => {
             >
               <ScrollLink
                 to={Resume}
-                download="Hardik-Gajera-Resume.pdf"
-                onClick={(event) => {
-                  event.preventDefault();
-                  window.open(Resume, "_blank");
-                }}
-                target="_blank"
+                onClick={handleResumeButtonClick}
                 className={`${
                   active ? "text-white" : "text-secondary"
                 } hover:text-white text-[18px] font-medium cursor-pointer nav-link resume`}

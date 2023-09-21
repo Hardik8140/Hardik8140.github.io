@@ -5,6 +5,18 @@ import { Tilt } from "react-tilt";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
+  const handleResumeButtonClick = () => {
+    window.open(Resume, "_blank");
+
+    const link = document.createElement("a");
+    link.href = Resume;
+    link.download = "Hardik-Gajera-Resume.pdf";
+    link.target = "_blank";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="relative w-full h-screen mx-auto" id="home">
       <div
@@ -32,17 +44,13 @@ const Hero = () => {
             <Tilt className="xs:w-[250px] w-full">
               <button
                 id="resume-button-2"
+                onClick={handleResumeButtonClick}
                 className="bg-secondary px-3 py-2 my-2  rounded-md shadow-lg shadow-purple-500/50 font-bold text-primary underline hover:underline"
               >
                 <Link
                   id="resume-link-2"
                   to={Resume}
-                  download="Hardik-Gajera-Resume.pdf"
                   className="flex items-center"
-                  onClick={(event) => {
-                    event.preventDefault();
-                    window.open(Resume, "_blank");
-                  }}
                 >
                   <img src={download} alt="resume" className="w-4 mr-2" />{" "}
                   Resume
