@@ -97,8 +97,8 @@ const Navbar = () => {
             id="resume-button-1"
           >
             <ScrollLink
-              download="Hardik-Gajera-Resume.pdf"
               to={Resume}
+              download="Hardik-Gajera-Resume.pdf"
               onClick={handleResumeButtonClick}
               className={`${
                 active ? "text-white" : "text-secondary"
@@ -137,7 +137,6 @@ const Navbar = () => {
             {navLinks.map((el) => (
               <Box key={el.id} pb={2}>
                 <ScrollLink
-                  download="Hardik-Gajera-Resume.pdf"
                   className={`${
                     active === el.title ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer `}
