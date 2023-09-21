@@ -29,17 +29,17 @@ const Navbar = () => {
     setToggle(false);
   };
 
-  const handleResumeButtonClick = () => {
-    const link = document.createElement("a");
-    link.href = Resume;
-    link.download = "Hardik-Gajera-Resume.pdf";
-    link.target = "_blank";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  // const handleResumeButtonClick = () => {
+  //   const link = document.createElement("a");
+  //   link.href = Resume;
+  //   link.download = "Hardik-Gajera-Resume.pdf";
+  //   link.target = "_blank";
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
 
-    window.open(Resume, "_blank");
-  };
+  //   window.open(Resume, "_blank");
+  // };
   // const scrollToTop = () => {
   //   window.scrollTo(0, 0);
   // };
@@ -92,14 +92,17 @@ const Navbar = () => {
               {el.title}
             </ScrollLink>
           ))}
+
           <button
             className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary"
             id="resume-button-1"
           >
             <ScrollLink
               to={Resume}
+              href={Resume}
+              target="_blank"
               download="Hardik-Gajera-Resume.pdf"
-              onClick={handleResumeButtonClick}
+              onClick={window.open(Resume, "_blank")}
               className={`${
                 active ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer nav-link resume`}
@@ -160,8 +163,10 @@ const Navbar = () => {
             >
               <ScrollLink
                 to={Resume}
+                href={Resume}
+                target="_blank"
                 download="Hardik-Gajera-Resume.pdf"
-                onClick={handleResumeButtonClick}
+                onClick={window.open(Resume, "_blank")}
                 className={`${
                   active ? "text-white" : "text-secondary"
                 } hover:text-white text-[18px] font-medium cursor-pointer `}
