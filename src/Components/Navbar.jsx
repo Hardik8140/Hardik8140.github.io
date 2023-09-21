@@ -30,8 +30,6 @@ const Navbar = () => {
   };
 
   const handleResumeButtonClick = () => {
-    window.open(Resume, "_blank");
-
     const link = document.createElement("a");
     link.href = Resume;
     link.download = "Hardik-Gajera-Resume.pdf";
@@ -39,6 +37,8 @@ const Navbar = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+
+    window.open(Resume, "_blank");
   };
   // const scrollToTop = () => {
   //   window.scrollTo(0, 0);
