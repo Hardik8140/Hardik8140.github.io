@@ -97,6 +97,7 @@ const Navbar = () => {
             id="resume-button-1"
           >
             <ScrollLink
+              download="Hardik-Gajera-Resume.pdf"
               to={Resume}
               onClick={handleResumeButtonClick}
               className={`${
@@ -160,6 +161,7 @@ const Navbar = () => {
             >
               <ScrollLink
                 to={Resume}
+                download="Hardik-Gajera-Resume.pdf"
                 onClick={handleResumeButtonClick}
                 className={`${
                   active ? "text-white" : "text-secondary"
