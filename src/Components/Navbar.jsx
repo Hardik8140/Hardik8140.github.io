@@ -59,7 +59,7 @@ const Navbar = () => {
           gap={8}
         >
           {navLinks.map((el) => (
-            <a
+            <ScrollLink
               className={`${
                 active === el.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer ${
@@ -67,29 +67,29 @@ const Navbar = () => {
               }`}
               key={el.title}
               to={el.id}
-              href={`#${el.id}`}
-              // spy={el.spy}
-              // smooth={el.smooth}
-              // offset={el.offset}
-              // duration={el.duration}
+              // href={`#${el.id}`}
+              spy={el.spy}
+              smooth={el.smooth}
+              offset={el.offset}
+              duration={el.duration}
               onClick={() => handleNavLinkClick(el)}
             >
               {el.title}
-            </a>
+            </ScrollLink>
           ))}
           <button
             className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary"
             id="resume-button-1"
           >
-            <ScrollLink
-              to={Resume}
+            <a
+              // to={Resume}
               href={Resume}
               rel="noopener noreferrer"
               download="Hardik-Gajera-Resume.pdf"
-              onClick={(event) => {
-                event.preventDefault();
-                window.open(Resume, "_blank");
-              }}
+              // onClick={(event) => {
+              //   event.preventDefault();
+              //   window.open(Resume, "_blank");
+              // }}
               target="_blank"
               className={`${
                 active ? "text-white" : "text-secondary"
@@ -97,7 +97,7 @@ const Navbar = () => {
               id="resume-link-1"
             >
               Resume
-            </ScrollLink>
+            </a>
           </button>
         </HStack>
 
@@ -127,44 +127,49 @@ const Navbar = () => {
           >
             {navLinks.map((el) => (
               <Box key={el.id} pb={2}>
-                <ScrollLink
+                <a
                   download="Hardik-Gajera-Resume.pdf"
                   className={`${
                     active === el.title ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer `}
                   to={el.id}
-                  spy={el.spy}
-                  smooth={el.smooth}
-                  offset={el.offset}
-                  duration={el.duration}
+                  href={`#${el.id}`}
                   onClick={() => {
                     handleNavLinkClick(el);
                     setToggle(false);
                   }}
+                  // spy={el.spy}
+                  // smooth={el.smooth}
+                  // offset={el.offset}
+                  // duration={el.duration}
+                  // onClick={() => {
+                  //   handleNavLinkClick(el);
+                  //   setToggle(false);
+                  // }}
                 >
                   {el.title}
-                </ScrollLink>
+                </a>
               </Box>
             ))}
             <button
               className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary"
               // id="resume-button-1"
             >
-              <ScrollLink
-                to={Resume}
+              <a
+                href={Resume}
                 download="Hardik-Gajera-Resume.pdf"
                 onClick={(event) => {
                   event.preventDefault();
                   window.open(Resume, "_blank");
                 }}
-                target="_blank"
+                // target="_blank"
                 className={`${
                   active ? "text-white" : "text-secondary"
                 } hover:text-white text-[18px] font-medium cursor-pointer`}
                 // id="resume-link-1"
               >
                 Resume
-              </ScrollLink>
+              </a>
             </button>
           </MenuList>
         </Menu>
