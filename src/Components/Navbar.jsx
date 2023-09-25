@@ -39,9 +39,10 @@ const Navbar = () => {
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <ScrollLink
-          to="/"
+          to="top"
           className="flex items-center gap-2"
-          onClick={handleScrollToTop}
+          smooth={true}
+          duration={500}
         >
           <img
             src={logoNoBackground}
@@ -67,7 +68,6 @@ const Navbar = () => {
               }`}
               key={el.title}
               to={el.id}
-              // href={`#${el.id}`}
               spy={el.spy}
               smooth={el.smooth}
               offset={el.offset}
