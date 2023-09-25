@@ -66,11 +66,11 @@ const Navbar = () => {
               key={el.title}
               to={el.id}
               href={`#${el.id}`}
-              // spy={el.spy}
-              // smooth={el.smooth}
-              // offset={el.offset}
-              // duration={el.duration}
-              // onClick={() => handleNavLinkClick(el)}
+              spy={el.spy}
+              smooth={el.smooth}
+              offset={el.offset}
+              duration={el.duration}
+              onClick={() => handleNavLinkClick(el)}
             >
               {el.title}
             </ScrollLink>
@@ -128,7 +128,7 @@ const Navbar = () => {
                 <Link
                   download="Hardik-Gajera-Resume.pdf"
                   className={`${
-                    active === el.title ? "text-white" : "text-secondary"
+                    active ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer `}
                   to={el.id}
                 >
