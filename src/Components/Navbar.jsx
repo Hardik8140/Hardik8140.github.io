@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { styles } from "../style";
+import { Link } from "react-router-dom";
 import { Link as ScrollLink, Element } from "react-scroll";
 import { logoNoBackground, menu, close, Resume } from "../assets";
 import { navLinks } from "../constants";
@@ -130,7 +131,7 @@ const Navbar = () => {
           >
             {navLinks.map((el) => (
               <Box key={el.id} pb={2}>
-                <ScrollLink
+                <Link
                   download="Hardik-Gajera-Resume.pdf"
                   className={`${
                     active === el.title ? "text-white" : "text-secondary"
@@ -146,7 +147,7 @@ const Navbar = () => {
                   }}
                 >
                   {el.title}
-                </ScrollLink>
+                </Link>
               </Box>
             ))}
             <button
