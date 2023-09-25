@@ -66,7 +66,6 @@ const Navbar = () => {
                 } hover:text-white text-[18px] font-medium cursor-pointer ${
                   el.className
                 }`}
-                // key={el.title}
                 to={el.id}
                 spy={el.spy}
                 smooth={el.smooth}
