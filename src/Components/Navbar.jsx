@@ -54,7 +54,6 @@ const Navbar = () => {
             <span className="sm:block hidden">| MERN Developer</span>
           </p>
         </ScrollLink>
-
         <HStack
           display={{ base: "none", sm: "flex", md: "flex", lg: "flex" }}
           gap={8}
