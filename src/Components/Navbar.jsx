@@ -36,7 +36,7 @@ const Navbar = () => {
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <ScrollLink
+        <Link
           to="/"
           className="flex items-center gap-2"
           onClick={handleScrollToTop}
@@ -50,7 +50,7 @@ const Navbar = () => {
             Hardik &nbsp;
             <span className="sm:block hidden">| MERN Developer</span>
           </p>
-        </ScrollLink>
+        </Link>
 
         <HStack
           display={{ base: "none", sm: "flex", md: "flex", lg: "flex" }}
@@ -79,7 +79,7 @@ const Navbar = () => {
             className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary"
             id="resume-button-1"
           >
-            <ScrollLink
+            <Link
               to={Resume}
               href={Resume}
               rel="noopener noreferrer"
@@ -95,7 +95,7 @@ const Navbar = () => {
               id="resume-link-1"
             >
               Resume
-            </ScrollLink>
+            </Link>
           </button>
         </HStack>
 
@@ -125,30 +125,19 @@ const Navbar = () => {
           >
             {navLinks.map((el) => (
               <Box key={el.id} pb={2}>
-                <ScrollLink
+                <Link
                   download="Hardik-Gajera-Resume.pdf"
                   className={`${
                     active === el.title ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer `}
                   to={el.id}
-                  // spy={el.spy}
-                  // smooth={el.smooth}
-                  // offset={el.offset}
-                  // duration={el.duration}
-                  // onClick={() => {
-                  //   handleNavLinkClick(el);
-                  //   setToggle(false);
-                  // }}
                 >
                   {el.title}
-                </ScrollLink>
+                </Link>
               </Box>
             ))}
-            <button
-              className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary"
-              // id="resume-button-1"
-            >
-              <ScrollLink
+            <button className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary">
+              <Link
                 to={Resume}
                 download="Hardik-Gajera-Resume.pdf"
                 onClick={(event) => {
@@ -159,10 +148,9 @@ const Navbar = () => {
                 className={`${
                   active ? "text-white" : "text-secondary"
                 } hover:text-white text-[18px] font-medium cursor-pointer`}
-                // id="resume-link-1"
               >
                 Resume
-              </ScrollLink>
+              </Link>
             </button>
           </MenuList>
         </Menu>
