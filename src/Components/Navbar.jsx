@@ -1,21 +1,17 @@
 import React, { useState } from "react";
 import { styles } from "../style";
 import { Link } from "react-router-dom";
-import { Link as ScrollLink, Element } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import { logoNoBackground, menu, close, Resume } from "../assets";
 import { navLinks } from "../constants";
 import {
   Box,
-  ListItem,
   Menu,
   MenuButton,
   MenuList,
-  UnorderedList,
   Image,
   HStack,
-  Button,
 } from "@chakra-ui/react";
-// import styled from "styled-components";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -29,9 +25,7 @@ const Navbar = () => {
     setActive(el.title);
     setToggle(false);
   };
-  // const scrollToTop = () => {
-  //   window.scrollTo(0, 0);
-  // };
+
   const toggleMenu = () => {
     setToggle(!toggle);
   };
@@ -131,23 +125,23 @@ const Navbar = () => {
           >
             {navLinks.map((el) => (
               <Box key={el.id} pb={2}>
-                <Link
+                <ScrollLink
                   download="Hardik-Gajera-Resume.pdf"
                   className={`${
                     active === el.title ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer `}
                   to={el.id}
-                  spy={el.spy}
-                  smooth={el.smooth}
-                  offset={el.offset}
-                  duration={el.duration}
-                  onClick={() => {
-                    handleNavLinkClick(el);
-                    setToggle(false);
-                  }}
+                  // spy={el.spy}
+                  // smooth={el.smooth}
+                  // offset={el.offset}
+                  // duration={el.duration}
+                  // onClick={() => {
+                  //   handleNavLinkClick(el);
+                  //   setToggle(false);
+                  // }}
                 >
                   {el.title}
-                </Link>
+                </ScrollLink>
               </Box>
             ))}
             <button
