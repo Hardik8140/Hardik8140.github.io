@@ -66,11 +66,11 @@ const Navbar = () => {
               key={el.title}
               to={el.id}
               href={`#${el.id}`}
-              spy={el.spy}
-              smooth={el.smooth}
-              offset={el.offset}
-              duration={el.duration}
-              onClick={() => handleNavLinkClick(el)}
+              // spy={el.spy}
+              // smooth={el.smooth}
+              // offset={el.offset}
+              // duration={el.duration}
+              // onClick={() => handleNavLinkClick(el)}
             >
               {el.title}
             </ScrollLink>
