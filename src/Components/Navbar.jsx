@@ -38,11 +38,10 @@ const Navbar = () => {
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <ScrollLink
-          to="top"
+        <a
+          href="#top"
           className="flex items-center gap-2"
-          smooth={true}
-          duration={500}
+          onClick={() => handleNavLinkClick({ title: "Top" })}
         >
           <img
             src={logoNoBackground}
@@ -53,13 +52,14 @@ const Navbar = () => {
             Hardik &nbsp;
             <span className="sm:block hidden">| MERN Developer</span>
           </p>
-        </ScrollLink>
+        </a>
+
         <HStack
           display={{ base: "none", sm: "flex", md: "flex", lg: "flex" }}
           gap={8}
         >
           {navLinks.map((el) => (
-            <ScrollLink
+            <a
               className={`${
                 active === el.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer ${
@@ -67,14 +67,15 @@ const Navbar = () => {
               }`}
               key={el.title}
               to={el.id}
-              spy={el.spy}
-              smooth={el.smooth}
-              offset={el.offset}
-              duration={el.duration}
+              href={`#${el.id}`}
+              // spy={el.spy}
+              // smooth={el.smooth}
+              // offset={el.offset}
+              // duration={el.duration}
               onClick={() => handleNavLinkClick(el)}
             >
               {el.title}
-            </ScrollLink>
+            </a>
           ))}
           <button
             className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary"
