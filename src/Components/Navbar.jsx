@@ -59,23 +59,24 @@ const Navbar = () => {
           gap={8}
         >
           {navLinks.map((el) => (
-            <ScrollLink
-              className={`${
-                active === el.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer ${
-                el.className
-              }`}
-              key={el.title}
-              to={el.id}
-              // href={`#${el.id}`}
-              spy={el.spy}
-              smooth={el.smooth}
-              offset={el.offset}
-              duration={el.duration}
-              onClick={() => handleNavLinkClick(el)}
-            >
-              {el.title}
-            </ScrollLink>
+            <Box key={el.id} pb={2}>
+              <ScrollLink
+                className={`${
+                  active === el.title ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer ${
+                  el.className
+                }`}
+                // key={el.title}
+                to={el.id}
+                spy={el.spy}
+                smooth={el.smooth}
+                offset={el.offset}
+                duration={el.duration}
+                onClick={() => handleNavLinkClick(el)}
+              >
+                {el.title}
+              </ScrollLink>
+            </Box>
           ))}
           <button
             className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary"
@@ -83,8 +84,6 @@ const Navbar = () => {
           >
             <ScrollLink
               to={Resume}
-              // href={Resume}
-              // rel="noopener noreferrer"
               download="Hardik-Gajera-Resume.pdf"
               onClick={(event) => {
                 event.preventDefault();
