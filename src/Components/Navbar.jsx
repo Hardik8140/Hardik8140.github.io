@@ -50,13 +50,13 @@ const Navbar = () => {
           />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
             Hardik &nbsp;
-            <span className="sm:block hidden">| MERN Developer</span>
+            <span className="lg:block hidden">| MERN Developer</span>
           </p>
         </a>
 
         <HStack
-          display={{ base: "none", sm: "flex", md: "flex", lg: "flex" }}
-          gap={8}
+          display={{ base: "none", sm: "none", md: "none", lg: "flex" }}
+          gap={7}
         >
           {navLinks.map((el) => (
             <Box key={el.id} pb={2}>
@@ -105,8 +105,8 @@ const Navbar = () => {
             mr={{ md: "-12", lg: "-12" }}
             display={{
               base: "flex",
-              sm: "none",
-              md: "none",
+              sm: "flex",
+              md: "flex",
               lg: "none",
             }}
             onClick={toggleMenu}
