@@ -24,6 +24,11 @@ const Navbar = () => {
   const handleNavLinkClick = (el) => {
     setActive(el.title);
     setToggle(false);
+
+    const element = document.getElementById(el.id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const toggleMenu = () => {
