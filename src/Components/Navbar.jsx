@@ -48,7 +48,7 @@ const Navbar = () => {
             alt="logo"
             className="w-9 h-9 object-contain"
           />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex">
+          <p className="text-white text-[18px] font-bold cursor-pointer flex lg:block hidden">
             Hardik &nbsp;
             <span className="lg:block hidden">| MERN Developer</span>
           </p>
