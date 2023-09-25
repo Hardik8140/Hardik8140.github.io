@@ -20,9 +20,9 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
-  const handleScrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
+  // const handleScrollToTop = () => {
+  //   window.scrollTo(0, 0);
+  // };
 
   const handleNavLinkClick = (el) => {
     setActive(el.title);
