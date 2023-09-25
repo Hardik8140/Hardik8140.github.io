@@ -35,12 +35,12 @@ const Navbar = () => {
   return (
     <nav
       id="nav-menu"
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+      className={`${styles.paddingXNav} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <a
           href="#top"
-          className="flex items-center gap-2"
+          className="flex  gap-2"
           onClick={() => handleNavLinkClick({ title: "Top" })}
         >
           <img
@@ -55,8 +55,8 @@ const Navbar = () => {
         </a>
 
         <HStack
-          display={{ base: "none", sm: "none", md: "none", lg: "flex" }}
-          gap={7}
+          display={{ base: "none", sm: "flex", md: "flex", lg: "flex" }}
+          gap={8}
         >
           {navLinks.map((el) => (
             <Box key={el.id} pb={2}>
@@ -105,8 +105,8 @@ const Navbar = () => {
             mr={{ md: "-12", lg: "-12" }}
             display={{
               base: "flex",
-              sm: "flex",
-              md: "flex",
+              sm: "none",
+              md: "none",
               lg: "none",
             }}
             onClick={toggleMenu}
