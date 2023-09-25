@@ -81,15 +81,15 @@ const Navbar = () => {
             className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary"
             id="resume-button-1"
           >
-            <a
-              // to={Resume}
-              href={Resume}
-              rel="noopener noreferrer"
+            <ScrollLink
+              to={Resume}
+              // href={Resume}
+              // rel="noopener noreferrer"
               download="Hardik-Gajera-Resume.pdf"
-              // onClick={(event) => {
-              //   event.preventDefault();
-              //   window.open(Resume, "_blank");
-              // }}
+              onClick={(event) => {
+                event.preventDefault();
+                window.open(Resume, "_blank");
+              }}
               target="_blank"
               className={`${
                 active ? "text-white" : "text-secondary"
@@ -97,7 +97,7 @@ const Navbar = () => {
               id="resume-link-1"
             >
               Resume
-            </a>
+            </ScrollLink>
           </button>
         </HStack>
 
@@ -127,49 +127,44 @@ const Navbar = () => {
           >
             {navLinks.map((el) => (
               <Box key={el.id} pb={2}>
-                <a
+                <ScrollLink
                   download="Hardik-Gajera-Resume.pdf"
                   className={`${
                     active === el.title ? "text-white" : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer `}
                   to={el.id}
-                  href={`#${el.id}`}
+                  spy={el.spy}
+                  smooth={el.smooth}
+                  offset={el.offset}
+                  duration={el.duration}
                   onClick={() => {
                     handleNavLinkClick(el);
                     setToggle(false);
                   }}
-                  // spy={el.spy}
-                  // smooth={el.smooth}
-                  // offset={el.offset}
-                  // duration={el.duration}
-                  // onClick={() => {
-                  //   handleNavLinkClick(el);
-                  //   setToggle(false);
-                  // }}
                 >
                   {el.title}
-                </a>
+                </ScrollLink>
               </Box>
             ))}
             <button
               className="bg-tertiary px-5 py-1 rounded-md hover:bg-secondary"
               // id="resume-button-1"
             >
-              <a
-                href={Resume}
+              <ScrollLink
+                to={Resume}
                 download="Hardik-Gajera-Resume.pdf"
                 onClick={(event) => {
                   event.preventDefault();
                   window.open(Resume, "_blank");
                 }}
-                // target="_blank"
+                target="_blank"
                 className={`${
                   active ? "text-white" : "text-secondary"
                 } hover:text-white text-[18px] font-medium cursor-pointer`}
                 // id="resume-link-1"
               >
                 Resume
-              </a>
+              </ScrollLink>
             </button>
           </MenuList>
         </Menu>
