@@ -7,8 +7,10 @@ import { styles } from "../style";
 const Skill = () => {
   return (
     <div id="skills" className="border-white">
-      <h2 className={styles.sectionHeadText}>Skill.</h2>
-      <p className={styles.sectionSubText}>FrontEnd</p>
+      <h2 className={styles.sectionHeadText}>Skills</h2>
+      <p className={`${styles.sectionSubText} text-center underline`}>
+        Frontend technology
+      </p>
 
       <div className="flex flex-row flex-wrap justify-center gap-8 skills-card-name">
         {frontEnd.map((technology) => (
@@ -23,7 +25,9 @@ const Skill = () => {
         ))}
       </div>
 
-      <p className={`${styles.sectionSubText} `}>BackEnd : </p>
+      <p className={`${styles.sectionSubText} text-center underline py-12`}>
+        BackEnd technology{" "}
+      </p>
 
       <div className="flex flex-row flex-wrap justify-center gap-8">
         {backendskill.map((technology) => (
