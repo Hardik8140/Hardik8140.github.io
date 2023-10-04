@@ -33,6 +33,8 @@ import {
   growFin,
   furlinko,
   furlinkoLogo,
+  homesweeter,
+  home,
 } from "../assets";
 
 export const navLinks = [
@@ -171,17 +173,18 @@ const backendskill = [
 
 const experiences = [
   {
-    title: "Furlinko, The online Furniture Store",
-    techStack: "HTML | CSS | JavaScript | React.Js | Redux | Chakra Ui",
-    icon: furlinkoLogo,
+    title: "HomeSweeter, The online Property Selling, Buying and Rental",
+    techStack:
+      "HTML | CSS | JavaScript | React.Js | Redux | Chakra Ui | Node.Js | Express.Js | MongoDB",
+    icon: homesweeter,
     iconBg: "#383E56",
-    date: "22 August - 26 August 2023",
-    image: furlinko,
-    github: "https://github.com/Hardik8140/gas-scarecrow-3264",
-    live: "https://gas-scarecrow-3264.vercel.app/",
+    date: "26 August - 30 August 2023",
+    image: home,
+    github: "https://github.com/ankitkrai07/gusty-adjustment-6018",
+    live: "https://homesweeter-ocuzifg6m-ankitkrai07.vercel.app/",
     points: [
-      "A collaborative project built by team of 2 full stack web developers in 5 days",
-      "All the given functionality is my responsibility and also i am team Leader",
+      "A collaborative project built by team of 3 full stack web developers in 5 days",
+      "I am responsible for the login, registration or admin panel part",
       "Implemented a user registration and the CRUD operation also a authentication features, product card and the purchase.",
       "Admin panel, Adding and deleting the product and filtering and sorting the product and Wishlist.",
       "Develope this project in the within a 5 days timeframe.",

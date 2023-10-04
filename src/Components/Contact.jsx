@@ -104,7 +104,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden ${styles.paddingX}`}
     >
       <div className="flex-[0.65] bg-black-100 p-8 rounded-2xl ">
         <p className={styles.sectionSubText}>Get in touch</p>

@@ -55,7 +55,7 @@ const Navbar = () => {
         </a>
 
         <HStack
-          display={{ base: "none", sm: "flex", md: "flex", lg: "flex" }}
+          display={{ base: "none", sm: "none", md: "flex", lg: "flex" }}
           gap={8}
         >
           {navLinks.map((el) => (
@@ -104,7 +104,7 @@ const Navbar = () => {
             mr={{ md: "-12", lg: "-12" }}
             display={{
               base: "flex",
-              sm: "none",
+              sm: "flex",
               md: "none",
               lg: "none",
             }}

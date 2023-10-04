@@ -47,14 +47,20 @@ import tripguide from "./tripguide.png";
 import qeepProject from "./qeep.png";
 import growFin from "./growFin.png";
 import furlinko from "./Furlinko.png";
+import homesweeter from "./homesweeter.svg";
+import home from "./home.png";
 
 import hardik from "./hardik.png";
 import code from "./twotone-code.svg";
 import commit from "./commit.svg";
 import done from "./cloud-done-outline.svg";
 import hours from "./shop-hours-outline.svg";
+import vector1 from "./company/Vector1.png";
 
 export {
+  vector1,
+  home,
+  homesweeter,
   furlinkoLogo,
   furlinko,
   hours,

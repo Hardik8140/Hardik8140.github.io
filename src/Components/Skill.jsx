@@ -6,13 +6,15 @@ import { styles } from "../style";
 
 const Skill = () => {
   return (
-    <div id="skills" className="border-white">
+    <div id="skills">
       <h2 className={styles.sectionHeadText}>Skills</h2>
       <p className={`${styles.sectionSubText} text-center underline`}>
         Frontend technology
       </p>
 
-      <div className="flex flex-row flex-wrap justify-center gap-8 skills-card-name">
+      <div
+        className={`flex flex-row flex-wrap justify-center gap-8 skills-card-name ${styles.paddingX} border-white`}
+      >
         {frontEnd.map((technology) => (
           <div className="w-28 h-28" key={technology.name}>
             <BallCanvas icon={technology.icon} className="skills-card" />

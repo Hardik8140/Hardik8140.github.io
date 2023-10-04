@@ -1,6 +1,6 @@
 import React from "react";
 import { styles } from "../style";
-import { download, Resume, Vector } from "../assets";
+import { download, Resume, vector1 } from "../assets";
 import { Tilt } from "react-tilt";
 import { Link } from "react-router-dom";
 
@@ -55,9 +55,9 @@ const Hero = () => {
           {/* <div className="sm:ml-5">
             <div className="absolute h-80 right-0 "> */}
           <img
-            src={Vector}
+            src={vector1}
             alt=""
-            className="home-img md:absolute lg:w-80 md:w-64 sm:w-32 flex md:right-10 bg-blend-multiply"
+            className="home-img md:absolute lg:w-80 md:w-64 sm:w-32 flex md:right-10 bg-blend-multiply "
           />
           {/* </div> */}
           {/* </div> */}

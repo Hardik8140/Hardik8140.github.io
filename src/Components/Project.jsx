@@ -13,6 +13,7 @@ import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/index";
 import { qeepProject } from "../assets";
 import { Link } from "react-router-dom";
+import { Text } from "@chakra-ui/react";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -81,7 +82,14 @@ const ExperienceCard = ({ experience }) => {
 
 const Project = () => {
   return (
-    <div id="projects" className="border-white">
+    <div id="projects" className={`${styles.paddingX}`}>
+      <div variants={textVariant()}>
+        <p className={`${styles.sectionSubText} text-center`}>
+          What I have done so far
+        </p>
+        <h2 className={`${styles.sectionHeadText} text-center`}>Projects</h2>
+      </div>
+
       <div className="mt-20 flex flex-col" id="projects">
         <VerticalTimeline>
           {experiences.map((experience, index) => (

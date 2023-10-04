@@ -1,8 +1,8 @@
 const styles = {
   paddingXNav: "sm:px-6 px-2",
-  paddingX: "sm:px-16 px-6",
+  paddingX: "sm:px-5 px-6",
   paddingY: "sm:py-16 py-6",
-  padding: "sm:px-16 px-6 sm:py-16 py-10",
+  padding: "sm:px-1 px-3 sm:py-16 py-10",
 
   heroHeadText:
     "font-black text-white lg:text-[60px] md:text-[40px] sm:text-[40px] xs:text-[40px] xxs:text-[30px] text-[40px] lg:leading-[98px] mt-2",

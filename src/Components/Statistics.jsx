@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { fadeIn, textVariant } from "../utils";
 import { styles } from "../style";
 import { Tilt } from "react-tilt";
@@ -14,8 +14,17 @@ import {
   phone,
 } from "../assets";
 import GitHubCalendar from "react-github-calendar";
+import Aos from "aos";
 
 const Statistics = () => {
+  const explicitTheme = {
+    light: ["#f0f0f0", "#c4edde", "#7ac7c4", "#f73859", "#384259"],
+    dark: ["#383838", "#4D455D", "#7DB9B6", "#F5E9CF", "#E96479"],
+  };
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <>
       <div
@@ -24,7 +33,6 @@ const Statistics = () => {
         className={`${styles.paddingX} max-w-7xl mx-auto `}
       >
         <p className={styles.sectionHeadText}>Statistics</p>
-        <h2 className={styles.sectionSubText}>About.</h2>
 
         <div className="mt-10 flex flex-wrap gap-5">
           {/* Location */}
@@ -146,14 +154,19 @@ const Statistics = () => {
         {/* github stats and calender and langauge */}
 
         {/* <Tilt> */}
-        <div className="mt-10 gap-5">
+        <div className="mt-10 gap-5 ">
           <h2 className={`${styles.sectionSubText} mt-9 mb-9`}>
             GitHub Calender.
           </h2>
           <GitHubCalendar
+            data-aos="fade-up"
+            blockRadius={"20px"}
             username="hardik8140"
-            year={2023}
-            className="m-auto react-activity-calendar"
+            year={"2023"}
+            responsive
+            colorScheme="dark"
+            style={{ color: "white" }}
+            className="m-auto react-activity-calendar text-white"
           />
         </div>
         {/* </Tilt> */}
