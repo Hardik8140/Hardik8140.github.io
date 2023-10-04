@@ -20,9 +20,19 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
-  // const handleScrollToTop = () => {
-  //   window.scrollTo(0, 0);
-  // };
+  const openResumeInNewTab = () => {
+    window.open(Resume, "_blank");
+  };
+
+  const downloadResume = () => {
+    const anchor = document.createElement("a");
+    anchor.href = Resume;
+    anchor.download = "Hardik-Gajera-Resume.pdf";
+    anchor.style.display = "none";
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  };
 
   const handleNavLinkClick = (el) => {
     setActive(el.title);
@@ -84,9 +94,13 @@ const Navbar = () => {
             <ScrollLink
               to={Resume}
               download="Hardik-Gajera-Resume.pdf"
-              onClick={(event) => {
-                event.preventDefault();
-                window.open(Resume, "_blank");
+              // onClick={(event) => {
+              //   event.preventDefault();
+              //   window.open(Resume, "_blank");
+              // }}
+              onClick={() => {
+                openResumeInNewTab();
+                downloadResume();
               }}
               target="_blank"
               className={`${
