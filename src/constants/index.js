@@ -183,11 +183,10 @@ const experiences = [
     github: "https://github.com/ankitkrai07/gusty-adjustment-6018",
     live: "https://homesweeter-ocuzifg6m-ankitkrai07.vercel.app/",
     points: [
-      "A collaborative project built by team of 3 full stack web developers in 5 days",
-      "I am responsible for the login, registration or admin panel part",
-      "Implemented a user registration and the CRUD operation also a authentication features, product card and the purchase.",
-      "Admin panel, Adding and deleting the product and filtering and sorting the product and Wishlist.",
-      "Develope this project in the within a 5 days timeframe.",
+      "A collaborative project built by a team of 3 full-stack web developers in 5 days",
+      "I am responsible for the login, registration, and admin panel parts. Implemented user registration, CRUD operations, and authentication features, including product card and purchase functionalities.",
+      "The admin panel includes adding and deleting products, as well as filtering and sorting them, along with a Wishlist feature.",
+      "Developed this project within a 5-day timeframe",
     ],
   },
   {
@@ -200,11 +199,11 @@ const experiences = [
     github: "https://github.com/Hardik8140/gas-scarecrow-3264",
     live: "https://gas-scarecrow-3264.vercel.app/",
     points: [
-      "A collaborative project built by team of 2 full stack web developers in 5 days",
-      "All the given functionality is my responsibility and also i am team Leader",
-      "Implemented a user registration and the CRUD operation also a authentication features, product card and the purchase.",
-      "Admin panel, Adding and deleting the product and filtering and sorting the product and Wishlist.",
-      "Develope this project in the within a 5 days timeframe.",
+      "A collaborative project built by a team of 2 full-stack web developers in 5 days. ",
+      "All the given functionalities are my responsibility, and I am also the team leader",
+      "I implemented user registration, CRUD operations, and authentication features, including product cards and purchases.",
+      "The admin panel involves adding and deleting products, as well as filtering, sorting, and managing the Wishlist. ",
+      "Developed this project within a 5-day timeframe",
     ],
   },
   {
@@ -217,9 +216,9 @@ const experiences = [
     github: "https://github.com/Hardik8140/guided-aftermath-7976",
     live: "https://qeep-rho.vercel.app/",
     points: [
-      "Implemented a user registration and the CRUD operation also a authentication features, product card and the purchase.",
-      "Admin panel, Adding and deleting the product and filtering and sorting the product and Wishlist.",
-      "Develope this project in the within a 5 days timeframe.",
+      "Implemented user registration, CRUD operations, and authentication features, along with product card and purchase functionalities",
+      "Admin panel responsibilities include adding and deleting products, as well as filtering, sorting, and managing the Wishlist.",
+      "Developed this project within a 5-day timeframe.",
     ],
   },
   {
@@ -232,10 +231,10 @@ const experiences = [
     github: "https://github.com/Hardik8140/waiting-knife-3384",
     live: "https://waiting-knife-3384-teal.vercel.app/",
     points: [
-      "Implement a registration and plan purchase and the helps to the user to find the investor and the entrepreneur.",
+      "Implemented registration and plan purchase to help users find investors and entrepreneurs.",
       "Created a dynamic landing page with a responsive design.",
       "Developed the project individually within a timeframe of 5 days.",
-      "Designed Grow Fin, a platform connecting investors and entrepreneurs for collaboration with startups..",
+      "Designed Grow Fin, a platform connecting investors and entrepreneurs for collaboration with startups.",
     ],
   },
   // {

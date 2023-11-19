@@ -19,10 +19,10 @@ const About = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Greetings! I'm Hardik Gajera, a skilled Full stack developer with a
-          passion for creating efficient and user-friendly web application. With
-          the expertise in the both Frontend and Backend technologies, i thrive
-          on bringing digital vision life.
+          Greetings! I'm Hardik Gajera, a skilled full-stack developer with a
+          passion for creating efficient and user-friendly web applications.
+          With expertise in both frontend and backend technologies, I thrive on
+          bringing digital visions to life.
         </p>
 
         <div className="mt-20 flex flex-wrap gap-5">
