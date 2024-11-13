@@ -24,6 +24,7 @@ import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
+import nextjs from "./nextjs-drupal.jpg";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
@@ -32,6 +33,7 @@ import chakraui from "./tech/chakraui.svg";
 import dsa from "./tech/data-structured.svg";
 import mongoose from "./tech/mongoose.svg";
 import express from "./tech/express.svg";
+import mui from "./mui-logo-freelogovectors.net_.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -40,6 +42,7 @@ import tesla from "./company/tesla.png";
 import qeep from "./company/logo-white.png";
 import grow from "./company/grow.png";
 import furlinkoLogo from "./WhatsApp Image 2023-08-22 at 2.59.40 PM.jpeg";
+import gfuture from "./OLC.jfif";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -57,7 +60,17 @@ import done from "./cloud-done-outline.svg";
 import hours from "./shop-hours-outline.svg";
 import vector1 from "./company/Vector1.png";
 
+import finix from "./finix.png";
+import rp from "./realproton.png";
+import hs from "./hs.png";
+
 export {
+  hs,
+  rp,
+  finix,
+  mui,
+  nextjs,
+  gfuture,
   vector1,
   home,
   homesweeter,

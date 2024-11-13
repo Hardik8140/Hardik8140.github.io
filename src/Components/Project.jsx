@@ -46,7 +46,7 @@ const ExperienceCard = ({ experience }) => {
         >
           {experience.techStack}
         </p>
-        <div>
+        {/* <div>
           <a
             href={experience.github}
             target="_blank"
@@ -62,7 +62,7 @@ const ExperienceCard = ({ experience }) => {
           >
             Live
           </a>
-        </div>
+        </div> */}
         <img src={experience.image} alt="" className="my-3" />
       </div>
 
@@ -87,7 +87,10 @@ const Project = () => {
         <p className={`${styles.sectionSubText} text-center`}>
           What I have done so far
         </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>Projects</h2>
+        <h2 className={`${styles.sectionHeadText} text-center`}>
+          {" "}
+          Work Experience
+        </h2>
       </div>
 
       <div className="mt-20 flex flex-col" id="projects">
